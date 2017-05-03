@@ -1,0 +1,208 @@
+doctype
+html(amp)
+    head
+        meta(charset="utf-8")
+        script(async, src="https://cdn.ampproject.org/v0.js")
+        script(async, custom-element="amp-carousel", src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+        link(rel="canonical", href="<%host%>/introduction/hello_world")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poller+One")
+        meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+
+        style(amp-custom)
+            include ../app/css/amphome.css
+
+        | <style amp-boilerplate>
+        include assets/css/ampboilerplate.css
+        | </style><noscript><style amp-boilerplate>
+        include assets/css/ampcss2.css
+        | </style></noscript>
+
+
+
+    body
+
+    include includes/casino-card
+
+        // logo image
+        - imgLogo01 = "./assets/images/card-images/simbaGames.png"
+        - imgLogo02 = "./assets/images/card-images/rizk.png"
+        - imgLogo03 = "./assets/images/card-images/grosvenor.png"
+        - imgLogo04 = "./assets/images/card-images/dunder.png"
+        - imgLogo05 = "./assets/images/card-images/casumo.png"
+        - imgLogo06 = "./assets/images/card-images/videoSlots.png"
+        - imgLogo07 = "./assets/images/card-images/ppCasino.png"
+        - imgLogo08 = "./assets/images/card-images/betway.png"
+        - imgLogo09 = "./assets/images/card-images/betFair.png"
+        - imgLogo10 = "./assets/images/card-images/888.png"
+
+        - offert01 = "Shadow Bet Casino: 100% up to €300, 1st Deposit Bonus"
+        - offert02 = "Shadow Bet Casino: 50% up to €400, 2nd Deposit Bonus"
+        - offert03 = "Shadow Bet Casino: 25% up to €500, 3rd Deposit Bonus"
+        - offert04 = "Shadow Bet Casino: Whole year of Free Spins up to 520 Free Spins"
+        - offert05 = "Shadow Bet Casino: From 5 up to 50 Free Spins"
+
+        mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
+            .casino-c(class= rateColor + " " + cardColor + " " + icons)
+                .casino-c__img
+                    amp-img(src= logo, width="200", height="200", layout="responsive", alt="a sample image")
+                .casino-c__details
+                    h4.casino-c__casino-title= name
+                    p= offer
+                .casino-c__icons
+                    ul
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_tablet" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_live" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_vip" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile-desk" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_paypal" x="0" y="0")
+                .casino-c__rating
+                    p
+                        span.casino-c__rating__title our Rating
+                        span.casino-c__rating__value 80/90
+                .casino-c__buttons
+                    a.casino-c__more(href="") More
+                    a.casino-c__play-now(href="") Play now
+
+        .wrapper
+            h1 Inside Casino
+            .carousel-container
+                amp-carousel(width="700", height="700", layout="responsive", type="slides", autoplay, delay="2000")
+                    amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                    amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                    amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                    amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+
+            .card-container
+                h1.casino-c__orange--group Top Rated Casino 1
+                +casino-c("rate-color1", "casino-c__orange", imgLogo01 , "Simba Games", offert01, "")
+                +casino-c("rate-color1", "casino-c__orange", imgLogo02 , "Rizk", offert02, "")
+                +casino-c("rate-color1", "casino-c__orange", imgLogo03 , "Grosvendor Casinos", offert03, "")
+                +casino-c("rate-color2", "casino-c__orange", imgLogo04 , "Dunder", offert04, "")
+                +casino-c("rate-color3", "casino-c__orange", imgLogo05 , "Casumo", offert05, "")
+
+                a(href='', class='casino-c__red')
+                    h2.casino-c__orange--group view all
+
+            .card-container
+                h1.casino-c__blue--group Recommended Casino
+                +casino-c("rate-color1", "casino-c__blue", imgLogo06 , "Video Slot", offert01, "")
+                +casino-c("rate-color1", "casino-c__blue", imgLogo07 , "PaddyPower Casino", offert02, "")
+                +casino-c("rate-color1", "casino-c__blue", imgLogo08 , "BetWay Casino", offert04, "")
+                +casino-c("rate-color2", "casino-c__blue", imgLogo09 , "BetFair Casino", offert04, "")
+                +casino-c("rate-color3", "casino-c__blue", imgLogo10 , "888 Casino", offert04, "")
+                a(href='', class='casino-c__blue')
+                    h2.casino-c__blue--group view all
+
+            .card-container
+                h1.casino-c__red--group Top Rated Casino 2
+                +casino-c("rate-color1", "casino-c__red", imgLogo06 , "Video Slot", offert01, "")
+                +casino-c("rate-color1", "casino-c__red", imgLogo07 , "PaddyPower Casino", offert02, "")
+                +casino-c("rate-color1", "casino-c__red", imgLogo08 , "BetWay Casino", offert03, "")
+                +casino-c("rate-color2", "casino-c__red", imgLogo09 , "BetFair Casino", offert04, "")
+                +casino-c("rate-color3", "casino-c__red", imgLogo10 , "888 Casino", offert05, "")
+                a(href='', class='casino-c__red')
+                    h2.casino-c__red--group view all
+
+            amp-img(src="http://placekitten.com/g/300/300", width="700", height="700", layout="responsive", alt="a sample image")
+            .offer
+                a.casino-c__more(href="") More
+                a.casino-c__play-now(href="") Play now
+            p.offer__terms.
+                New customer only, Min Dep £10, Max Bonus £500 + 50 Spins on Starburts,
+                Slot only, 4 x conversion, 30 x Wagering + T&C's apply
+
+            .card-container
+                h1.casino-c__red--group Top Rated Casino
+                +casino-c("rate-color1", "casino-c__red", imgLogo01 , "Simba Games", offert01, "casino-c--icons_visible")
+                +casino-c("rate-color2", "casino-c__red", imgLogo02 , "Rizk", offert03, "casino-c--icons_visible")
+                +casino-c("rate-color1", "casino-c__red", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c--icons_visible")
+                +casino-c("rate-color2", "casino-c__red", imgLogo04 , "Dunder", offert04, "casino-c--icons_visible")
+                +casino-c("rate-color3", "casino-c__red", imgLogo05 , "Casumo", offert05, "casino-c--icons_visible")
+                a(href='', class='casino-c__red')
+                    h2.casino-c__red--group view all
+
+
+            .about-us
+                .about-us__title
+                    hr
+                    h2.about-us__title--position About US
+                .about-us__cards
+                    .about-us__card
+                        .about-us__img
+                            amp-img(src="http://placekitten.com/g/150/150", width="150", height="150", layout="responsive", alt="a sample image")
+                        h2 Bonuses, Promotions and Free Spins
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+                        a(href='') Read more
+                    .about-us__card
+                        .about-us__img
+                            amp-img(src="http://placekitten.com/g/150/150", width="150", height="150", layout="responsive", alt="a sample image")
+                        h2 The Best Casino Site Reviews
+                        p.
+                            We will guide you through the casinos that you ought to know, emphasising quality, usability and passion. We'll point out the best and point out
+                            the worst, each casino accompanied by a mathematically definitive rating out of 100. Your journey to find the best new casino sites begins here.
+                        a(href='') Read more
+                    .about-us__card
+                        .about-us__img
+                            amp-img(src="http://placekitten.com/g/150/150", width="150", height="150", layout="responsive", alt="a sample image")
+                        h2 Software
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+                        a(href='') Read more
+                    .about-us__card
+                        .about-us__img
+                            amp-img(src="http://placekitten.com/g/150/150", width="150", height="150", layout="responsive", alt="a sample image")
+                        h2 Payment Options
+                        p.
+                            We will guide you through the casinos that you ought to know, emphasising quality, usability and passion. We'll point out the best and point out
+                            the worst, each casino accompanied by a mathematically definitive rating out of 100. Your journey to find the best new casino sites begins here.
+                        a(href='') Read more
+                    .about-us__card.about-us__card--purple
+                        h2 Games
+                        p.
+                            What makes a great slot experience? Immersive graphics? Awesome tunes? Glorious, scatter symbol induced free spin bonus jamboree rounds?
+                            Blackjack and Roulette that don't look like they came free on a Windows 96 computer? Whatever you are looking for, we'll signpost the way to find them.
+                        a(href='') Read more
+                    .about-us__card.about-us__card--purple
+                        h2 Platforms
+                        p.
+                            Versatility. A casino must be optimised for every platform, again, to cater to the player's individual needs. In the mobile age, games should play EVEN
+                            BETTER on smartphone and tablet devices. We now spend 65% of our digital media time on mobile devices. Mobile first? More money, less problems.
+                        a(href='') Read more
+
+
+                    .about-us__card
+                        h2 Licensing and Geographic Availability
+                        p.
+                            What makes a great slot experience? Immersive graphics? Awesome tunes? Glorious, scatter symbol induced free spin bonus jamboree rounds?
+                            Blackjack and Roulette that don't look like they came free on a Windows 96 computer? Whatever you are looking for, we'll signpost the way to find them.
+                        a(href='') Read more
+                    .about-us__card
+                        h2 Customer Support
+                        p.
+                            Versatility. A casino must be optimised for every platform, again, to cater to the player's individual needs. In the mobile age, games should play EVEN
+                            BETTER on smartphone and tablet devices. We now spend 65% of our digital media time on mobile devices. Mobile first? More money, less problems.
+                        a(href='') Read more
+                    .about-us__card
+                        h2 What does it all mean?
+                        p.
+                            What makes a great slot experience? Immersive graphics? Awesome tunes? Glorious, scatter symbol induced free spin bonus jamboree rounds?
+                            Blackjack and Roulette that don't look like they came free on a Windows 96 computer? Whatever you are looking for, we'll signpost the way to find them.
+                        a(href='') Read more

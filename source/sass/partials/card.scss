@@ -1,0 +1,255 @@
+$help: false;
+
+$iconWidth: 40px;
+
+// different type of card color variable
+// red
+$cardColorRed: #f00028;
+$cardBGColorRed: lighten($cardColorRed, 50%);
+$cardbottomBorderRed: lighten($cardColorRed, 45%);
+
+// blue
+$cardColorBlue: #0080f7;
+$cardBGColorBlue: lighten($cardColorBlue, 50%);
+$cardbottomBorderBlue: lighten($cardColorBlue, 45%);
+
+// orange
+$cardColorOrange: #F78F00;
+$cardBGColorOrange: lighten($cardColorOrange, 50%);
+$cardbottomBorderOrange: lighten($cardColorOrange, 45%);
+
+// color for ratings
+$rate-color1: #00A651;
+$rate-color2: #DFB300;
+$rate-color3: #FF2626;
+
+// card style mixin
+@mixin colorCard($cardColor, $cardBGColor, $cardbottomBorder) {
+  background: $cardBGColor;
+  border-bottom: 1px solid $cardbottomBorder;
+
+  .casino-c {
+    &__playNow {
+      background: $cardColor;
+      color: white;
+    }
+
+    &__casino-title {
+      color: $cardColor;
+    }
+
+    &__icons {
+      svg {
+        fill: $cardColor;
+      }
+    }
+  }
+  .casino-c__more {
+    color: $cardColor;
+  }
+}
+
+// rating mixin
+@mixin rating($rate-color) {
+  border-left: 10px solid rgba($rate-color, 0.5);
+
+  .casino-c__rating_value {
+    color: $rate-color;
+  }
+}
+
+// green rating
+.rate-color1 {
+  @include rating($rate-color1);
+}
+
+// yelow rating
+.rate-color2 {
+  @include rating($rate-color2);
+}
+
+// red rating
+.rate-color3 {
+  @include rating($rate-color3);
+}
+
+.casino-c__red--group, a.casino-c__red:hover {
+  color: $cardColorRed;
+}
+
+.casino-c__blue--group, a.casino-c__blue:hover {
+  color: $cardColorBlue;
+}
+
+.casino-c__orange--group, a.casino-c__orange:hover {
+  color: $cardColorOrange;
+}
+
+
+
+
+
+// red card
+.casino-c__red {
+  @include colorCard($cardColorRed, $cardBGColorRed, $cardbottomBorderRed);
+}
+
+// blue card
+.casino-c__blue {
+  @include colorCard($cardColorBlue, $cardBGColorBlue, $cardbottomBorderBlue);
+}
+
+//orange card
+.casino-c__orange {
+  @include colorCard($cardColorOrange, $cardBGColorOrange, $cardbottomBorderOrange);
+}
+
+section > .top {
+  margin-left: 20px;
+}
+
+section .top:first-child {
+  margin-left: 0;
+}
+
+.iconOutline {
+  fill: #FFFFFF;
+}
+
+.casino-c {
+  &__logo {
+    img {
+      max-width: 100px;
+    }
+  }
+
+  &__casinoInfo {
+    padding: 5px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__more {
+    display: none;
+  }
+
+  &__icons {
+    display: none;
+    padding: 0 20px;
+    max-width: $iconWidth * 3 + 2 * 20px;
+    min-width: $iconWidth * 3 + 2 * 20px;
+
+    li {
+      svg {
+        width: $iconWidth;
+        height: $iconWidth;
+        line-height: $iconWidth;
+
+        //border-radius: 40px
+        //text-align: center
+        //background: white
+        margin: 3px 0;
+      }
+    }
+  }
+
+  &--icons_visible {
+    .casino-c__icons, .casino-c__more {
+      display: block;
+    }
+  }
+
+  &__rating {
+    @if $help {
+      background: rgba(black, 0.1);
+    }
+  }
+
+  &__cta {
+    @if $help {
+      background: rgba(black, 0.3);
+    }
+  }
+
+  &__rating_value {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  &__rating__title {
+    display: none;
+    margin: 0 15px;
+  }
+
+  &__casino-title {
+    font-size: 1em;
+  }
+
+  &__ctaAndRatingContainer {
+    min-width: 100px;
+  }
+
+  &--icons_visible {
+    .casino-c__ctaAndRatingContainer {
+      min-width: 200px;
+    }
+  }
+
+  .casino-c__cta {
+    .btn-group {
+      .btn {
+        width: 100px;
+      }
+    }
+  }
+}
+
+
+
+.casino-c__cta {
+  .btn-group {
+    .btn {
+      width: 100px;
+      border-radius: 0;
+      padding: 5px 0;
+      height: $iconWidth + $iconWidth / 4;
+      border: 0 solid transparent;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .casino-c {
+    &__second, &__first, &__icons, &__ctaAndRatingContainer {
+      width: 100%;
+    }
+
+    &__icons, &__ctaAndRatingContainer {
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &__icons {
+      ul {
+        width: 100%;
+        padding-bottom: 1rem;
+
+        li {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    &__rating__title {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .row .casino-c {
+    height: 111px;
+  }
+}

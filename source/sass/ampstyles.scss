@@ -1,0 +1,325 @@
+@import "./partials/variables";
+
+// card style mixin
+@mixin colorCard($cardColor, $cardBGColor, $cardbottomBorder) {
+  background: $cardBGColor;
+  border-bottom: 1px solid $cardbottomBorder;
+
+  .casino-c {
+    background-color: $cardBGColor;
+  }
+  .casino-c {
+    &__play-now {
+      background: $cardColor;
+      color: white;
+    }
+
+    &__casino-title {
+      color: $cardColor;
+    }
+
+    &__icons {
+      svg {
+        fill: $cardColor;
+      }
+    }
+  }
+  .casino-c__more {
+    color: $cardColor;
+    background-color: white;
+  }
+}
+
+
+@mixin rating($rate-color) {
+  border-left: 10px solid rgba($rate-color, 0.5);
+
+  .casino-c__rating__value {
+    color: $rate-color;
+  }
+}
+
+// green rating
+.rate-color1 {
+  @include rating($rate-color1);
+}
+
+
+// yellow rating
+.rate-color2 {
+  @include rating($rate-color2);
+}
+
+// red rating
+.rate-color3 {
+  @include rating($rate-color3);
+}
+
+.casino-c__red--group, a.casino-c__red:hover {
+  color: $cardColorRed;
+}
+
+.casino-c__blue--group, a.casino-c__blue:hover {
+  color: $cardColorBlue;
+}
+
+.casino-c__orange--group, a.casino-c__orange:hover {
+  color: $cardColorOrange;
+}
+
+// red card
+.casino-c__red {
+  @include colorCard($cardColorRed, $cardBGColorRed, $cardbottomBorderRed);
+}
+
+// blue card
+.casino-c__blue {
+  @include colorCard($cardColorBlue, $cardBGColorBlue, $cardbottomBorderBlue);
+}
+
+//orange card
+.casino-c__orange {
+  @include colorCard($cardColorOrange, $cardBGColorOrange, $cardbottomBorderOrange);
+}
+
+.casino-c {
+  display: flex;
+  flex-wrap: wrap;
+  color: $font-color;
+}
+
+.casino-c {
+  &__img {
+    width: 25%;
+    max-width: 150px;
+    min-width: 95px;
+  }
+
+  &__details {
+    width: 70%;
+
+    p {
+      padding-right: 10px;
+    }
+
+  }
+
+  &__rating, &__buttons {
+    width: 50%;
+  }
+
+  &__icons li svg {
+    height: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__rating {
+    text-align: center;
+  }
+  &__play-now, &__more {
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poller One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__rating__value {
+    padding-left: 10px;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  &__icons {
+    width: 100%;
+    display: none;
+
+    ul {
+      width: 100%;
+      list-style-type: none;
+      padding-left: 0;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    li {
+      display: inline-block;
+      width: 45px;
+    }
+  }
+
+
+  &__icons--visible {
+    .casino-c__icons{
+      display: block;
+    }
+  }
+}
+
+.iconOutline {
+  fill:#FFFFFF;
+}
+
+.carousel-container, .card-container {
+  margin: auto;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.carousel-container {
+  max-width: 400px;
+}
+
+.card-container h1 {
+  padding-left: 15px;
+}
+
+.icons {
+  display: none;
+}
+
+.view-all {
+  margin: auto;
+  text-decoration: none;
+}
+
+a h2 {
+  text-align: center;
+}
+
+a h2:hover {
+  text-decoration: underline;
+}
+
+.offer {
+  display: flex;
+  position: relative;
+
+  a {
+    position: absolute;
+    bottom: -20px;
+    width: 45%;
+    padding: 8px 0;
+  }
+
+
+
+  .casino-c__more {
+    color: $theme-color-1;
+    border: 4px solid $theme-color-1;
+    display: block;
+    background-color: #FFFFFF;
+    left: 2.5%;
+    overflow: hidden;
+  }
+
+  .casino-c__play-now {
+    border: 4px solid $theme-color-1;
+    color: #FFFFFF;
+    background-color: $theme-color-1;
+    right: 2.5%;
+  }
+
+
+
+  &__terms {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: $font-color;
+  }
+
+}
+
+.about-us {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  &__card {
+    width: 100%;
+    padding: 15px;
+
+    h2 {
+      text-align: center;
+      color: $theme-color-2;
+    }
+
+    a {
+      text-align: center;
+      color: $theme-color-1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    &--purple {
+      background-color: lighten($theme-color-2, 50%);
+    }
+
+  }
+
+  &__title {
+    margin-top: 3rem;
+    color: $font-color;
+    position: relative;
+
+    &--position {
+      position: absolute;
+      top: -28px;
+      width: 40%;
+      left: 30%;
+      text-align: center;
+      background: white;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+h1, h2 {
+  font-family: 'Poller One', sans-serif;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+hr {
+  border-top: 1px solid lighten($theme-color-2, 50%);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+$font-color: #9EA1A2;
+
+$theme-color-1: orange;
+$theme-color-2: #662B91;
+
+  // different type of card color variable
+  // red
+$cardColorRed: #f00028;
+$cardBGColorRed: lighten($cardColorRed, 50%);
+$cardbottomBorderRed: lighten($cardColorRed, 45%);
+
+// blue
+$cardColorBlue: #0080f7;
+$cardBGColorBlue: lighten($cardColorBlue, 50%);
+$cardbottomBorderBlue: lighten($cardColorBlue, 45%);
+
+// orange
+$cardColorOrange: #F78F00;
+$cardBGColorOrange: lighten($cardColorOrange, 50%);
+$cardbottomBorderOrange: lighten($cardColorOrange, 45%);
+
+// color for ratings
+$rate-color1: #00A651;
+$rate-color2: #DFB300;
+$rate-color3: #FF2626;

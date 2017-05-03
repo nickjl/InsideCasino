@@ -1,0 +1,122 @@
+.first-image, .third-image {
+  position: relative; }
+
+.first-image h1, .third-image h1, .first-image p, .third-image p {
+  position: absolute;
+  left: 10px; }
+
+.first-image h1, .third-image h1 {
+  bottom: 30%; }
+
+.first-image p, .third-image p {
+  bottom: 0; }
+
+.second-image {
+  background-color: lightblue; }
+
+.bx-wrapper {
+  position: static !important;
+  /* center to page correctly */
+  border: 0 !important;
+  /* border */
+  -webkit-box-shadow: none !important;
+  /* these two shadows */
+  box-shadow: none !important;
+  background: transparent; }
+
+.header-slider p {
+  font-size: 0.8rem; }
+
+.header-slider h1 {
+  font-size: 1.5rem;
+  margin-top: 0; }
+
+.header-slider a, .header-slider a:hover {
+  color: inherit; }
+
+.slider-wrapper-bg {
+  background: greenyellow; }
+
+.slider-wrapper {
+  max-width: 1200px;
+  display: block;
+  margin: auto; }
+
+.arrow {
+  display: none; }
+
+@media (max-width: 767px) {
+  .second-image h1, .second-image p {
+    position: absolute;
+    left: 10px; }
+  .second-image h1 {
+    bottom: 30%; }
+  .second-image p {
+    bottom: 0; }
+  .second-image {
+    height: 97vw; } }
+
+@media screen and (min-width: 768px) {
+  .header-slider div.arrow {
+    display: block;
+    position: absolute;
+    background-color: orange;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0; }
+  .header-slider {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  .header-slider .first-image h1 {
+    font-size: 2.2rem; }
+  .header-slider .second-image h1 {
+    font-size: 1.5rem; }
+  .header-slider .third-image h1 {
+    font-size: 1.1rem; }
+  .header-slider .first-image p, .header-slider .second-image p {
+    width: 80%; }
+  .header-slider p {
+    font-size: 0.8rem; }
+  .header-slider div {
+    display: inline-block;
+    width: 50%; }
+  .header-slider div.second-image {
+    position: relative;
+    padding-top: 50%;
+    vertical-align: bottom; }
+  .header-slider div img {
+    max-width: 100%; }
+  .header-slider div.third-image {
+    width: calc(100%/3); }
+  .header-slider div.arrow-top {
+    top: 0;
+    background-color: red; }
+  .second-image {
+    position: relative; }
+  .second-image h1, .second-image p {
+    position: absolute;
+    left: 10px; }
+  .second-image h1 {
+    bottom: 30%; }
+  .second-image p {
+    bottom: 0; } }
+
+@media screen and (min-width: 992px) {
+  .header-slider div {
+    float: left; }
+  .header-slider div.second-image {
+    width: 50%;
+    padding-top: 25%; }
+  .header-slider div.third-image {
+    width: 25%;
+    height: 50%; }
+  .header-slider .first-image h1 {
+    font-size: 2.5rem; }
+  .header-slider .first-image p, .header-slider .second-image p {
+    width: 85%; }
+  .header-slider .second-image h1 {
+    font-size: 1.8rem; }
+  .header-slider p {
+    font-size: 0.9rem; } }
