@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['source/**/*.sass', 'source/**/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'browserSync']
+                tasks: ['sass', 'autoprefixer']
             },
 
             css: {
@@ -18,10 +18,10 @@ module.exports = function (grunt) {
                 tasks: ['pug']
             },
 
-            browserSync: {
-                files: ['app/**/*.css', 'app/**/*.html'],
-                tasks: ['pug', 'browserSync']
-            },
+            // browserSync: {
+            //     files: ['app/**/*.css', 'app/**/*.html'],
+            //     tasks: ['pug', 'browserSync']
+            // },
 
         },
 

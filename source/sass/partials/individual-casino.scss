@@ -1,0 +1,41 @@
+.casino-pg {
+  background-color: yellow;
+
+  &__title {
+
+    &--img {
+      width: 100%;
+    }
+  }
+
+  &__rating {
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    padding: 15px;
+
+    &--dot {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 50px;
+      background-color: green;
+    }
+  }
+
+  &__offer--box {
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .casino-pg {
+
+    &__width {
+      width: 50%;
+    }
+  }
+
+}

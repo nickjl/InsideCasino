@@ -1,9 +1,6 @@
-doctype html
-html
-    include includes/head
+extends includes/layout
 
-    body
-
+block content
     include includes/casino-card
 
         // logo image
@@ -87,10 +84,6 @@ html
                                         If you would like to view all Slots bonuses click here.
                                     .arrow
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
-                                            style(type='text/css').
-                                                .st0arrow {
-                                                    fill: #FFFFFF;
-                                                }
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
                             .third-image
                                 a(href='')
@@ -99,10 +92,6 @@ html
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
-                                            style(type='text/css').
-                                                .st0arrow {
-                                                    fill: #FFFFFF;
-                                                }
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
                             .third-image
                                 a(href='')
@@ -111,10 +100,6 @@ html
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
-                                            style(type='text/css').
-                                                .st0arrow {
-                                                    fill: #FFFFFF;
-                                                }
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
                             .third-image.hidden-lg-up
                                 a(href='')
@@ -123,10 +108,6 @@ html
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
-                                            style(type='text/css').
-                                                .st0arrow {
-                                                    fill: #FFFFFF;
-                                                }
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
             .container-fluid.casino-cards
                 .row
@@ -254,9 +235,6 @@ html
                         a(href='') Read more
 
 
-
-
-
-
-
-        include includes/foot
+append scripts
+    script(src='assets/js/jquery.bxslider.min.js')
+    script(src='assets/js/custom.js')
