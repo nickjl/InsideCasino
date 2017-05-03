@@ -96,8 +96,8 @@ module.exports = function (grunt) {
             default_options: {
                 bsFiles: {
                     src: [
-                        'app/css/app.css',
-                        'app/index.html'
+                        'app/css/*.css',
+                        'app/*.html'
                         // '*.pug',
                     ]
                 },
