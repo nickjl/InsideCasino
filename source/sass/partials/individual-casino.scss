@@ -1,11 +1,19 @@
+$help: false;
+
 .casino-pg {
-  background-color: yellow;
+  background-color: orange; //TODO
+  border-bottom: 15px solid black;
 
   &__title {
-
-    &--img {
-      width: 100%;
+    @if $help {
+      background-color: greenyellow;
     }
+
+
+  }
+
+  &__img {
+    max-height: 200px;
   }
 
   &__rating {
@@ -13,22 +21,101 @@
     border-radius: 25px;
     text-align: center;
     padding: 15px;
+    max-height: 50px;
+    max-width: 300px;
+    margin: auto;
 
     &--dot {
       width: 25px;
       height: 25px;
       margin-right: 10px;
       border-radius: 50px;
+      background-color: green; //TODO
+    }
+  }
+
+  &__offer {
+    @if $help {
+      background-color: red;
+    }
+
+    &--box {
+      width: 75%;
+      border: 3px solid black; //TODO
+      border-radius: 10px;
+      padding: 20px 10px;
+    }
+
+    &--playNow {
+      width: 45%;
+      background: red; //TODO
+      margin: 10px auto;
+      text-align: center;
+      padding: 10px;
+      color: orange; //TODO
+    }
+  }
+
+  &__gallery {
+    @if $help {
       background-color: green;
     }
   }
 
-  &__offer--box {
-    width: 80%;
-    border: 2px solid black;
-    border-radius: 10px;
+  &__icons {
+    @if $help {
+      background-color: blue;
+    }
+
+    svg {
+      height: 60px;
+    }
+
+    &--box {
+      text-align: center;
+    }
+
   }
+
+  &__details {
+    background-color: rgba(0,0,0,0.5);
+
+    p {
+      color: white;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
 }
+
+.iconOutline {
+  fill: black; //TODO
+}
+
+.iconColor {
+  fill: transparent; //TODO
+}
+
+.bx-wrapper {
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.bx-wrapper .bx-pager {
+  position: relative;
+  padding-top: 0;
+  bottom: auto;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: orange; //TODO
+  border: 3px solid black; //TODO
+}
+
+
 
 @media (min-width: 768px) {
   .casino-pg {
@@ -36,6 +123,13 @@
     &__width {
       width: 50%;
     }
+
+    &__details {
+      border-top-right-radius: 80px;
+      height: 70%;
+    }
+
+
   }
 
 }

@@ -21,7 +21,8 @@ html(amp)
 
     body
 
-    include includes/casino-card
+        include includes/svg/svg
+        //include includes/casino-card/casino-card
 
         // logo image
         - imgLogo01 = "./assets/images/card-images/simbaGames.png"
@@ -126,13 +127,15 @@ html(amp)
 
             .card-container
                 h1.casino-c__red--group Top Rated Casino
-                +casino-c("rate-color1", "casino-c__red", imgLogo01 , "Simba Games", offert01, "casino-c--icons_visible")
-                +casino-c("rate-color2", "casino-c__red", imgLogo02 , "Rizk", offert03, "casino-c--icons_visible")
-                +casino-c("rate-color1", "casino-c__red", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c--icons_visible")
-                +casino-c("rate-color2", "casino-c__red", imgLogo04 , "Dunder", offert04, "casino-c--icons_visible")
-                +casino-c("rate-color3", "casino-c__red", imgLogo05 , "Casumo", offert05, "casino-c--icons_visible")
+                +casino-c("rate-color1", "casino-c__red", imgLogo01 , "Simba Games", offert01, "casino-c__icons--visible")
+                +casino-c("rate-color2", "casino-c__red", imgLogo02 , "Rizk", offert03, "casino-c__icons--visible")
+                +casino-c("rate-color1", "casino-c__red", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c__icons--visible")
+                +casino-c("rate-color2", "casino-c__red", imgLogo04 , "Dunder", offert04, "casino-c__icons--visible")
+                +casino-c("rate-color3", "casino-c__red", imgLogo05 , "Casumo", offert05, "casino-c__icons--visible")
                 a(href='', class='casino-c__red')
                     h2.casino-c__red--group view all
+
+
 
 
             .about-us

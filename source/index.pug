@@ -1,7 +1,7 @@
 extends includes/layout
 
 block content
-    include includes/casino-card
+    include includes/svg/svg
 
         // logo image
         - imgLogo01 = "./assets/images/card-images/simbaGames.png"
@@ -23,13 +23,13 @@ block content
 
 
         // pop up icon mixin
-        mixin pop(toggle, placement, trigger, title, content, name)
+        //mixin pop(toggle, placement, trigger, title, content, name)
             li(data-container="body" data-toggle= toggle data-placement= placement data-trigger= trigger title= title data-content= content)
                 .iconColor
                     svg(viewBox="0 0 110 110" width="40" height="40")
                         use(xlink:href= name x="0" y="0")
         // card mixin
-        mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
+        //mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
             .casino-c.d-flex.align-items-stretch.justify-content-start.flex-column.flex-sm-row(class= rateColor + " " + cardColor + " " + icons)
                 .casino-c__first.d-flex
                     .casino-c__logo.align-self-center
@@ -55,7 +55,6 @@ block content
                             .btn-group(role='group', aria-label='example')
                                 button.btn.btn-secondary.casino-c__more(type='button') More
                                 button.btn.btn-secondary.casino-c__playNow(type='button') Play Now
-        test
         .wrapper
             .container-fluid.slider-wrapper-bg
                 .slider-wrapper
@@ -237,4 +236,4 @@ block content
 
 append scripts
     script(src='assets/js/jquery.bxslider.min.js')
-    script(src='assets/js/custom.js')
+    script(src='assets/js/bxSliderHome.js')

@@ -1,23 +1,79 @@
 extends includes/layout
 
+
+
 block content
 
-    section.casino-pg
-        .d-flex.flex-column.flex-md-row
-            .casino-pg__width.casino-pg__title.d-flex.justify-content-center.flex-wrap
-                .casino-pg__title--img.d-flex.justify-content-center
-                    img.img-fluid(src="assets/images/card-images/10bet.png")
-                .casino-pg__rating.d-flex.flex-row.align-items-center
-                    .casino-pg__rating--dot
-                    span Our ratings
-                    span 80/90
-            .casino-pg__width.casino-pg__offer
-                h2 Offer
-                .casino-pg__offer--box
-                    h2 200% Bonus Up To £50 + 200 Free Spins
-        .d-flex.flex-column.flex-md-row
-            .casino-pg__width.casino-pg__details
-                h2 Details
-            .casino-pg__width.casino-pg__gallery
-                h2 Gallery
+    include includes/svg/svg
+
+
+    .wrapper
+
+        section.casino-pg
+            .d-flex.flex-column.flex-md-row
+                .casino-pg__width.casino-pg__title.d-flex.flex-column
+                    .d-flex.justify-content-center
+                        img.casino-pg__img(src="assets/images/card-images/simbaGames.png")
+                    .casino-pg__rating.d-flex.flex-row.justify-content-center.align-items-center
+                        .casino-pg__rating--dot
+                        span.pr-2 Our ratings
+                        span 80/90
+                .casino-pg__width.casino-pg__offer.d-flex.flex-column.align-items-center
+                    h2 OFFER
+                    .casino-pg__offer--box.d-flex.flex-column
+                        h2 200% Bonus Up To £50 + 200 Free Spins
+                        a.casino-pg__offer--playNow(href="") Play now
+            .d-flex.flex-column.flex-md-row
+                .casino-pg__width.flex-last.flex-md-unordered.flex-column.d-flex.justify-content-between
+                    div
+                    .casino-pg__icons.d-flex.p-4.justify-content-around
+                        .casino-pg__icons--box
+                            svg.tablet(viewBox="0 0 110 110")
+                                use(xlink:href="#i_tablet" x="0" y="0")
+                            p Desktop and Mobile
+                        .casino-pg__icons--box
+                            svg.vip(viewBox="0 0 110 110")
+                                use(xlink:href="#i_vip" x="0" y="0")
+                            p Available for download
+                        .casino-pg__icons--box
+                            svg.live(viewBox="0 0 110 110")
+                                use(xlink:href="#i_live" x="0" y="0")
+                            p Live Dealer
+                        .casino-pg__icons--box
+                            svg.mobile(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile" x="0" y="0")
+                            p Desktop and Mobile
+                        .casino-pg__icons--box
+                            svg.desk(viewBox="0 0 110 110")
+                                use(xlink:href="#i_desk" x="0" y="0")
+                            p Desktop and Mobile
+                        .casino-pg__icons--box
+                            svg.paypal(viewBox="0 0 110 110")
+                                use(xlink:href="#i_paypal" x="0" y="0")
+                            p Paypal
+                    .casino-pg__details.d-flex.flex-column.p-4
+                        h1 Betfair Casino
+                        p.
+                            Spinsvilla Casino is an online casino that's powered by Cozygames Management Ltd. Casinos, and is one that appeared online in the summer of 2016.
+                            Cozygames are based in the Isle of Man and have licences issued by the Commission for YK-based players. Cozygames operate a number of other top-notch online
+                            casinos, including Windfall Casino, Swanky Bingo Casino and Royalio Casino.
+                .casino-pg__width.casino-pg__gallery.flex-first.flex-md-unordered
+                    h2 Gallery
+                    .gallery-slider
+                        .test
+                            img(src="http://placekitten.com/g/400/400")
+                        .test
+                            img(src="http://placekitten.com/g/400/400")
+                        .test
+                            img(src="http://placekitten.com/g/400/400")
+                        .test
+                            img(src="http://placekitten.com/g/400/400")
+
+
+
+
+
+append scripts
+    script(src='assets/js/jquery.bxslider.min.js')
+    script(src='assets/js/bxSliderCasino.js')
 
