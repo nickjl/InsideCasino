@@ -1,27 +1,49 @@
+
+
 extends includes/layout
 
+append css
+    style
+        //include ../app/css/casinos/betfair.css
 
+
+
+
+block vars
+    - bodyId = "betfair";
 
 block content
+    // pop up icon mixin
+    mixin dropcard(collapseNumber, title, content)
+        .card
+            .card-header(role='tab', id= 'heading' + collapseNumber)
+                h5.mb-0
+                    a.collapsed(data-toggle='collapse', data-parent='#accordion', href= '#collapse' + collapseNumber, aria-expanded='true', aria-controls= 'collapse' + collapseNumber)
+                        = title
+                        i.float-right ^
+            .collapse(id= 'collapse' + collapseNumber, role='tabpanel', aria-labelledby= 'heading' + collapseNumber)
+                .card-block
+                    = content
 
     include includes/svg/svg
 
 
     .wrapper
 
-        section.casino-pg
+        section.casino-pg.rate-color-1
             .d-flex.flex-column.flex-md-row
                 .casino-pg__width.casino-pg__title.d-flex.flex-column
                     .d-flex.justify-content-center
-                        img.casino-pg__img(src="assets/images/card-images/simbaGames.png")
+                        img.casino-pg__img(src="assets/images/card-images/betFair.png")
                     .casino-pg__rating.d-flex.flex-row.justify-content-center.align-items-center
                         .casino-pg__rating--dot
-                        span.pr-2 Our ratings
-                        span 80/90
+                        span.casino-pg__rating--text.pr-2 Our rating:
+                        span.casino-pg__rating--value 80/90
                 .casino-pg__width.casino-pg__offer.d-flex.flex-column.align-items-center
                     h2 OFFER
                     .casino-pg__offer--box.d-flex.flex-column
-                        h2 200% Bonus Up To £50 + 200 Free Spins
+                        h2
+                            b 200% Bonus Up To £50 + 200 Free Spins
                         a.casino-pg__offer--playNow(href="") Play now
             .d-flex.flex-column.flex-md-row
                 .casino-pg__width.flex-last.flex-md-unordered.flex-column.d-flex.justify-content-between
@@ -30,28 +52,28 @@ block content
                         .casino-pg__icons--box
                             svg.tablet(viewBox="0 0 110 110")
                                 use(xlink:href="#i_tablet" x="0" y="0")
-                            p Desktop and Mobile
+                            p.p-1.p-md-2 Desktop and Mobile
                         .casino-pg__icons--box
                             svg.vip(viewBox="0 0 110 110")
                                 use(xlink:href="#i_vip" x="0" y="0")
-                            p Available for download
+                            p.p-1.p-md-2 Available for download
                         .casino-pg__icons--box
                             svg.live(viewBox="0 0 110 110")
                                 use(xlink:href="#i_live" x="0" y="0")
-                            p Live Dealer
+                            p.p-1.p-md-2 Live Dealer
                         .casino-pg__icons--box
                             svg.mobile(viewBox="0 0 110 110")
                                 use(xlink:href="#i_mobile" x="0" y="0")
-                            p Desktop and Mobile
+                            p.p-1.p-md-2 Desktop and Mobile
                         .casino-pg__icons--box
                             svg.desk(viewBox="0 0 110 110")
                                 use(xlink:href="#i_desk" x="0" y="0")
-                            p Desktop and Mobile
+                            p.p-1.p-md-2 Desktop and Mobile
                         .casino-pg__icons--box
                             svg.paypal(viewBox="0 0 110 110")
                                 use(xlink:href="#i_paypal" x="0" y="0")
-                            p Paypal
-                    .casino-pg__details.d-flex.flex-column.p-4
+                            p.p-1.p-md-2 Paypal
+                    .casino-pg__details.d-flex.flex-column.px-4
                         h1 Betfair Casino
                         p.
                             Spinsvilla Casino is an online casino that's powered by Cozygames Management Ltd. Casinos, and is one that appeared online in the summer of 2016.
@@ -72,8 +94,86 @@ block content
 
 
 
+        section.casino-info
+            .container-fluid
+                .d-flex.flex-column.flex-md-row
+                    .d-flex.flex-column.casino-info__width.p-2
+                        p.
+                            QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                            along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                            Queen Vegas Casino does not accept players from the United States.
+                        //.about__title
+                            hr
+                            h2.about__title-position About US
+                        .d-flex.flex-column.flex-sm-row.flex-wrap
+                            .casino-bonus
+                                .casino-bonus__top
+                                    img(src="assets/images/card-images/betFair.png")
+                                    .casino-bonus__top--code.p-2
+                                        span code: GUTSB1
+                                .casino-bonus__bottom.p-3
+                                    h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                    p Welcome Bonus
+                                    a(href="") GET NOW
+                            .casino-bonus
+                                .casino-bonus__top
+                                    img(src="assets/images/card-images/betFair.png")
+                                    .casino-bonus__top--code.p-2
+                                        span code: GUTSB1
+                                .casino-bonus__bottom.p-3
+                                    h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                    p Welcome Bonus
+                                    a(href="") GET NOW
+                            .casino-bonus
+                                .casino-bonus__top
+                                    img(src="assets/images/card-images/betFair.png")
+                                    .casino-bonus__top--code.p-2
+                                        span code: GUTSB1
+                                .casino-bonus__bottom.p-3
+                                    h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                    p Welcome Bonus
+                                    a(href="") GET NOW
+                            .casino-bonus
+                                .casino-bonus__top
+                                    img(src="assets/images/card-images/betFair.png")
+                                    .casino-bonus__top--code.p-2
+                                        span code: GUTSB1
+                                .casino-bonus__bottom.p-3
+                                    h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                    p Welcome Bonus
+                                    a(href="") GET NOW
+
+
+
+                            //.casino-bonus
+                                img.casino-bonus__img(src="assets/images/card-images/betFair.png")
+                            //.casino-bonus
+                                img.casino-bonus__img(src="assets/images/card-images/betFair.png")
+
+                    .d-flex.flex-column.casino-info__width.p-2
+                        #accordion(role='tablist', aria-multiselectable='true')
+                            +dropcard('One', 'Withdrawal Times', 'content')
+                            +dropcard('Two', 'Withdrawal Methods', 'content')
+                            +dropcard('Three', 'Deposit Methods', 'content')
+                            +dropcard('Four', 'Software', 'content')
+                            +dropcard('Five', 'Currencies', 'content')
+                            +dropcard('Six', 'Languages', 'content')
+                            +dropcard('Seven', 'Licenses', 'content')
+                            +dropcard('Eight', 'Restricted Countries', 'content')
+                            +dropcard('Nine', 'Casino Type', 'content')
+                            +dropcard('Ten', 'Return To Player', 'content')
+                            +dropcard('Eleven', 'Manual Flushing', 'content')
+                            +dropcard('Twelve', 'Live Chat', 'content')
+                            +dropcard('Thirteen', 'Contact casino', 'content')
+                            +dropcard('Fourteen', 'Affiliate Program', 'content')
+
+
+
+
 
 append scripts
+    script(src='assets/js/tether.min.js')
+    script(src='assets/js/bootstrap.min.js')
     script(src='assets/js/jquery.bxslider.min.js')
     script(src='assets/js/bxSliderCasino.js')
 

@@ -1,4 +1,4 @@
-- dev = false
+- bodyId = "";
 
 doctype
 html
@@ -17,7 +17,9 @@ html
             //- link(rel='profile', href='')
             //link(rel='shortcut icon', href='http://www.monacoriches.com/favicon.png', type='image/x-icon')
             //link(rel='canonical', href='http://www.monacoriches.com/')
-    body
+
+    block vars
+    body(id= bodyId)
         include casino-card/casino-card
 
         block content

@@ -22,14 +22,14 @@
 @import "scss/buttons";
 
 // Components
-//@import "scss/transitions";
+@import "scss/transitions";
 //@import "scss/dropdown";
 @import "scss/button-group";
 //@import "scss/input-group";
 //@import "scss/custom-forms";
 @import "scss/nav";
 @import "scss/navbar";
-//@import "scss/card";
+@import "scss/card";
 //@import "scss/breadcrumb";
 //@import "scss/pagination";
 //@import "scss/badge";
@@ -56,6 +56,8 @@ $bg_colour:             #f4f4f4;
 $box_colour:            #fff;
 $border_style:          1px solid;
 $border_radius:         4px;
+$header-font: 'Poller One';
+$body-font: sans-serif;
 
 html {
   background:         $bg_colour;
@@ -66,7 +68,7 @@ body {
 }
 
 body, input, button, a, h2, h1 {
-  font-family: 'Poller One', sans-serif;
+  font-family: $header-font, $body-font;
   //color: #9EA1A2;
 }
 
@@ -100,7 +102,7 @@ p {
 
 
 h4, p, a {
-  font-family: sans-serif;
+  font-family: $body-font;
 }
 
 

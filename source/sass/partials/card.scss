@@ -112,9 +112,7 @@ section .top:first-child {
   margin-left: 0;
 }
 
-.iconOutline {
-  fill: #FFFFFF;
-}
+
 
 .casino-c {
   &__logo {
@@ -153,7 +151,11 @@ section .top:first-child {
         margin: 3px 0;
       }
     }
+
+
   }
+
+
 
   &--icons_visible {
     .casino-c__icons, .casino-c__more {
@@ -206,7 +208,9 @@ section .top:first-child {
   }
 }
 
-
+.iconCollor {
+  fill: #FFFFFF;
+}
 
 .casino-c__cta {
   .btn-group {

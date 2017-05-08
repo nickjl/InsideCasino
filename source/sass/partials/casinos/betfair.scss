@@ -1,0 +1,86 @@
+$casino-color-1: orange;
+$casino-color-2: black;
+
+
+
+#betfair {
+  .casino-pg {
+    background-color: $casino-color-1; //TODO
+    border-bottom: 15px solid $casino-color-2; //TODO
+    &--dot {
+      background-color: green; //TODO
+    }
+
+    &__offer {
+
+      &--box {
+        border: 3px solid lighten($casino-color-2, 40%); //TODO
+
+        h2 {
+          color: $casino-color-2;
+        }
+      }
+
+      &--playNow {
+        background: $casino-color-2; //TODO
+        color: $casino-color-1; //TODO
+      }
+    }
+
+    &__icons {
+      p {
+        color: $casino-color-2;
+      }
+    }
+
+  }
+
+  h2 {
+    color: lighten($casino-color-2, 40%);
+  }
+
+  .iconCollor {
+    fill: $casino-color-2; //TODO
+  }
+
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: $casino-color-1; //TODO
+    border: 3px solid $casino-color-2; //TODO
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $casino-color-2; //TODO
+  }
+
+  .casino-bonus {
+    background: lighten($casino-color-1, 40%);
+    margin: 1%;
+
+    &__top {
+      background-color: lighten($casino-color-2, 40%); //TODO
+      position: relative;
+
+      &--code {
+        color: lighten($casino-color-2, 25%);
+
+      }
+    }
+
+    &__bottom {
+
+      h2 {
+        color: $casino-color-2
+      }
+
+      p {
+        color: lighten($casino-color-2, 25%);
+      }
+    }
+
+
+  }
+
+
+}
+

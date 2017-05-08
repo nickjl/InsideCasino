@@ -1,15 +1,53 @@
 $help: false;
 
+// color for ratings
+$rate-color1: #00A651;
+$rate-color2: #DFB300;
+$rate-color3: #FF2626;
+
+$color-template-1: green;
+$color-template-2: yellow;
+
+// rating mixin
+@mixin rating($rate-color) {
+  .casino-pg {
+
+    &__rating {
+
+      &--dot {
+        background-color: $rate-color; //TODO
+      }
+      &--value {
+        color: $rate-color; //TODO
+      }
+    }
+
+  }
+}
+
+// green rating
+.rate-color-1 {
+  @include rating($rate-color1);
+}
+
+// yelow rating
+.rate-color-2 {
+  @include rating($rate-color2);
+}
+
+// red rating
+.rate-color-3 {
+  @include rating($rate-color3);
+}
+
 .casino-pg {
-  background-color: orange; //TODO
-  border-bottom: 15px solid black;
+  background-color: $color-template-1; //TODO
+  border-bottom: 15px solid $color-template-2; //TODO
 
   &__title {
     @if $help {
       background-color: greenyellow;
     }
-
-
   }
 
   &__img {
@@ -30,7 +68,11 @@ $help: false;
       height: 25px;
       margin-right: 10px;
       border-radius: 50px;
-      background-color: green; //TODO
+    }
+
+    &--text {
+      font-family: $body-font;
+      color: grey;
     }
   }
 
@@ -41,18 +83,27 @@ $help: false;
 
     &--box {
       width: 75%;
-      border: 3px solid black; //TODO
+      border: 3px solid lighten($color-template-2, 40%);; //TODO
       border-radius: 10px;
       padding: 20px 10px;
+
+      h2 {
+        font-family: $body-font;
+        color: $color-template-2;
+      }
+
+      a {
+        font-family: $header-font;
+      }
     }
 
     &--playNow {
       width: 45%;
-      background: red; //TODO
+      background: $color-template-2; //TODO
       margin: 10px auto;
       text-align: center;
       padding: 10px;
-      color: orange; //TODO
+      color: $color-template-1; //TODO
     }
   }
 
@@ -69,10 +120,15 @@ $help: false;
 
     svg {
       height: 60px;
+      fill: transparent;
     }
 
     &--box {
       text-align: center;
+    }
+
+    p {
+      color: $color-template-2
     }
 
   }
@@ -88,32 +144,117 @@ $help: false;
       font-size: 1.8rem;
     }
   }
+  h2 {
+    color: lighten($color-template-2, 40%);
+  }
+
+
+  .iconCollor {
+    fill: $color-template-2; //TODO
+  }
+
+
+
+  .bx-wrapper {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .bx-wrapper .bx-pager {
+    position: relative;
+    padding-top: 0;
+    bottom: auto;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: $color-template-1; //TODO
+    border: 3px solid $color-template-2; //TODO
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $color-template-2; //TODO
+  }
+
+  .bx-wrapper {
+    img {
+      margin: auto;
+      max-width: 350px;
+    }
+  }
 
 }
 
-.iconOutline {
-  fill: black; //TODO
+
+
+
+
+.casino-info {
+  padding-top: 3rem;
+
+  .card {
+    border: none;
+  }
+
+  .card-header {
+    background-color: transparent;
+    text-align: center;
+    border-bottom: 1px solid orange; //TODO
+  }
+
+  .casino-bonus {
+    background: $color-template-1;
+    margin: 1%;
+
+    &__top {
+      background-color: lighten($color-template-2, 40%); //TODO
+      position: relative;
+
+      img {
+        max-height: 150px;
+        display: block;
+        margin: auto;
+      }
+
+      &--code {
+        width:75%;
+        text-align: center;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        position: absolute;
+        bottom: -20px;
+        left: 12.5%;
+        font-size: 0.8rem;
+        font-family: $body-font;
+        font-weight: 600;
+        color: lighten($color-template-2, 10%) //TODO
+
+
+      }
+    }
+
+    &__bottom {
+      a{
+        font-family: $header-font;
+      }
+
+      h2 {
+        font-family: $body-font;
+        text-align: left;
+        color: $color-template-2; //TODO
+      }
+
+      p {
+        color: lighten($color-template-2, 25%);
+      }
+    }
+
+
+
+
+  }
 }
 
-.iconColor {
-  fill: transparent; //TODO
-}
 
-.bx-wrapper {
-  margin: auto;
-  margin-bottom: 50px;
-}
-
-.bx-wrapper .bx-pager {
-  position: relative;
-  padding-top: 0;
-  bottom: auto;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a {
-  background: orange; //TODO
-  border: 3px solid black; //TODO
-}
 
 
 
@@ -127,6 +268,19 @@ $help: false;
     &__details {
       border-top-right-radius: 80px;
       height: 70%;
+    }
+
+
+  }
+
+  .casino-info {
+
+    &__width {
+      width: 50%;
+    }
+
+    .casino-bonus {
+      width: 48%;
     }
 
 
