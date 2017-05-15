@@ -1,3 +1,5 @@
+@import "./partials/variables";
+
 $help: false;
 
 // color for ratings
@@ -5,8 +7,8 @@ $rate-color1: #00A651;
 $rate-color2: #DFB300;
 $rate-color3: #FF2626;
 
-$color-template-1: green;
-$color-template-2: yellow;
+$color-template-1: orange;
+$color-template-2: black;
 
 // rating mixin
 @mixin rating($rate-color) {
@@ -51,17 +53,23 @@ $color-template-2: yellow;
   }
 
   &__img {
-    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
   }
 
   &__rating {
     background-color: white;
     border-radius: 25px;
-    text-align: center;
     padding: 15px;
     max-height: 50px;
-    max-width: 300px;
+    max-width: 240px;
     margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+
+
+
 
     &--dot {
       width: 25px;
@@ -77,23 +85,30 @@ $color-template-2: yellow;
   }
 
   &__offer {
+    text-align: center;
+    margin-top: 3rem;
     @if $help {
       background-color: red;
     }
 
     &--box {
       width: 75%;
-      border: 3px solid lighten($color-template-2, 20%);; //TODO
+      border: 3px solid lighten($color-template-2, 40%);; //TODO
       border-radius: 10px;
       padding: 20px 10px;
+      display: flex;
+      margin: auto;
+      flex-direction: column;
 
-      b {
+
+      h2 {
         font-family: $body-font;
         color: $color-template-2;
       }
 
       a {
         font-family: $header-font;
+        text-decoration: none;
       }
     }
 
@@ -108,12 +123,16 @@ $color-template-2: yellow;
   }
 
   &__gallery {
+    text-align: center;
+    margin-top: 3rem;
     @if $help {
       background-color: green;
     }
   }
 
   &__icons {
+    display: inline-flex;
+
     @if $help {
       background-color: blue;
     }
@@ -135,6 +154,7 @@ $color-template-2: yellow;
 
   &__details {
     background-color: rgba(0,0,0,0.5);
+    padding: 25px 15px;
 
     p {
       color: white;
@@ -142,6 +162,7 @@ $color-template-2: yellow;
 
     h1 {
       font-size: 1.8rem;
+      color: white;
     }
   }
   h2 {
@@ -149,9 +170,6 @@ $color-template-2: yellow;
   }
 
 
-  .iconCollor {
-    fill: $color-template-2; //TODO
-  }
 
   &__playNow {
     padding: 10px;
@@ -161,46 +179,37 @@ $color-template-2: yellow;
     text-align: center;
     font-family: $header-font, $body-font;
     margin-top: 2rem;
-    font-size: 1.2rem;
-
   }
 
 
-  .bx-wrapper {
-    margin: auto;
-    margin-bottom: 30px;
-  }
+}
 
-  .bx-wrapper .bx-pager {
-    position: relative;
-    padding-top: 0;
-    bottom: auto;
-  }
+.svg-hide{
+  display: none;
+}
 
-  .bx-wrapper .bx-pager.bx-default-pager a {
-    background: $color-template-1; //TODO
-    border: 3px solid $color-template-2; //TODO
-  }
+.iconCollor {
+  fill: $color-template-2; //TODO
+}
 
-  .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: $color-template-2; //TODO
-  }
+amp-accordion .accordion-header {
+  background-color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid $theme-color-1;
+  padding: 10px 15px;
+  text-align: center;
+  color: $theme-color-1
+}
 
-  .bx-wrapper {
-    img {
-      margin: auto;
-      max-width: 350px;
-    }
-  }
-
+amp-accordion .accordion-content {
+  padding: 10px 15px;
 }
 
 
 
 
-
 .casino-info {
-  padding-top: 3rem;
+  padding: 3rem 15px;
 
   .card {
     border: none;
@@ -212,23 +221,18 @@ $color-template-2: yellow;
     border-bottom: 1px solid $theme-color-1; //TODO
   }
 
-  h2 {
-    text-align: left;
-    font-family: $body-font;
-    color: #96999B;
-    margin-bottom: 1rem; ;
-  }
 
 
   .casino-bonus {
-    background: lighten($color-template-1, 40%);
+    background: $color-template-1;
+    max-width: 60%;
+    margin: 1rem auto;
 
     &__top {
-      background-color: $color-template-1; //TODO
+      background-color: lighten($color-template-2, 40%); //TODO
       position: relative;
 
-      img {
-        max-height: 150px;
+      amp-img {
         display: block;
         margin: auto;
       }
@@ -241,16 +245,18 @@ $color-template-2: yellow;
         position: absolute;
         bottom: -20px;
         left: 12.5%;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: $body-font;
         font-weight: 600;
-        color: lighten($color-template-2, 10%) //TODO
+        color: lighten($color-template-2, 10%); //TODO
+        padding: 12px;
 
 
       }
     }
 
     &__bottom {
+      padding: 15px;
       a{
         font-family: $header-font;
       }
@@ -259,82 +265,61 @@ $color-template-2: yellow;
         font-family: $body-font;
         text-align: left;
         color: $color-template-2; //TODO
-        font-size: 1.1rem;
       }
 
       p {
-        color: lighten($color-template-2, 30%);
+        color: lighten($color-template-2, 25%);
       }
     }
+
+
+
+
+
+
   }
-
-  &__pros {
-    list-style-image: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png');
-  }
-
-  &__cons {
-    list-style-image: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png');
-  }
-
-  &__thumbnail {
-    img {
-      max-height: 70px;
-      border: 1px solid #dddddd;
-      border-radius: 15px;
-    }
-  }
-
-}
-
-@media (min-width: 576px) {
-
-  .casino-info {
-
-    .casino-bonus {
-      width: 47%;
-      margin: auto;
-    }
-  }
-
 }
 
 
-
-
-
-@media (min-width: 768px) {
-  .casino-pg {
-
-    &__width {
-      width: 50%;
-    }
-
-    &__details {
-      border-top-right-radius: 80px;
-      height: 70%;
-    }
-
-
-  }
-
-  .casino-info {
-
-    &__width {
-      width: 50%;
-    }
-
-  }
-
-
+.ruled-title {
+  width: 100%;
+  height: 20px;
+  border-bottom: 1px solid lighten($theme-color-2, 50%);
+  text-align: center;
+  margin: 1.5rem 0;
 }
 
-@media (min-width: 992px) {
+.ruled-title span {
+  color: $font-color;
+  font-size: 1.5rem;
+  background: white;
+  padding: 0 10px;
+}
 
-  .casino-info {
+.ruled-title.more-content {
+  border-bottom: 1px solid $theme-color-1;
+  height: 12px;
+}
 
-    .casino-bonus {
-      max-width: 220px;
-    }
-  }
+.ruled-title.more-content span {
+  color: $theme-color-1;
+  font-size: 1rem;
+  font-family: $body-font;
+  border: 1px solid $theme-color-1;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
 
+
+h1, h2, span {
+  font-family: $header-font, $body-font;
+}
+
+body {
+  font-family: $body-font;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: auto;
 }

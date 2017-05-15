@@ -1,0 +1,167 @@
+doctype
+html(amp)
+    head
+        meta(charset="utf-8")
+        script(async, src="https://cdn.ampproject.org/v0.js")
+        script(async, custom-element="amp-carousel", src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+        script(async, custom-element="amp-accordion", src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js")
+        link(rel="canonical", href="<%host%>/introduction/hello_world")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poller+One")
+        meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+
+        style(amp-custom)
+            include ../app/css/ampcasino.css
+
+        | <style amp-boilerplate>
+        include assets/css/ampboilerplate.css
+        | </style><noscript><style amp-boilerplate>
+        include assets/css/ampcss2.css
+        | </style></noscript>
+
+
+
+
+
+    body
+
+        include includes/svg/svg
+        //include includes/casino-card/casino-card
+            //TODO SVG HAS STYLE DISPLAY NONE IN IT
+
+
+        .wrapper
+            h1 Inside Casino
+
+            section.casino-pg.rate-color-1
+                div
+                    .casino-pg__width.casino-pg__title
+                        div
+                            amp-img.casino-pg__img(src="assets/images/card-images/betFair.png", width="200", height="200", layout="responsive", alt="a sample image")
+                        .casino-pg__rating
+                            .casino-pg__rating--dot
+                            span.casino-pg__rating--text Our rating
+                            span.casino-pg__rating--value 80/90
+                    .casino-pg__width.casino-pg__offer
+                        h2 OFFER
+                        .casino-pg__offer--box
+                            h2
+                                b 200% Bonus Up To £50 + 200 Free Spins
+                            a.casino-pg__offer--playNow(href="") Play now
+                div
+                    .casino-pg__width.casino-pg__gallery
+                        h2 Gallery
+                        .carousel-container
+                            amp-carousel(width="700", height="700", layout="responsive", type="slides", autoplay, delay="2000")
+                                amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                                amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                                amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                                amp-img(src="http://placekitten.com/g/900/900", width="700", height="700", layout="responsive", alt="a sample image")
+                    .casino-pg__width
+                        .casino-pg__icons
+                            .casino-pg__icons--box
+                                svg.tablet(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_tablet" x="0" y="0")
+                                p Desktop and Mobile
+                            .casino-pg__icons--box
+                                svg.vip(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_vip" x="0" y="0")
+                                p Available for download
+                            .casino-pg__icons--box
+                                svg.live(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_live" x="0" y="0")
+                                p Live Dealer
+                            .casino-pg__icons--box
+                                svg.mobile(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_mobile" x="0" y="0")
+                                p Desktop and Mobile
+                            .casino-pg__icons--box
+                                svg.desk(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_desk" x="0" y="0")
+                                p Desktop and Mobile
+                            //.casino-pg__icons--box
+                                svg.paypal(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_paypal" x="0" y="0")
+                                p Paypal
+                        .casino-pg__details
+                            h1 Betfair Casino
+                            p.
+                                Spinsvilla Casino is an online casino that's powered by Cozygames Management Ltd. Casinos, and is one that appeared online in the summer of 2016.
+                                Cozygames are based in the Isle of Man and have licences issued by the Commission for YK-based players. Cozygames operate a number of other top-notch online
+                                casinos, including Windfall Casino, Swanky Bingo Casino and Royalio Casino.
+
+
+            section.casino-info
+                p.
+                    QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                    along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                    Queen Vegas Casino does not accept players from the United States.
+                p.
+                    QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                    along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                    Queen Vegas Casino does not accept players from the United States.
+                p.
+                    QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                    along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                    Queen Vegas Casino does not accept players from the United States.
+                p.
+                    QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                    along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                    Queen Vegas Casino does not accept players from the United States.
+                p.
+                    QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                    along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                    Queen Vegas Casino does not accept players from the United States.
+
+                amp-accordion
+                    section
+                        h4.accordion-header Withdrawal Times
+                        p.accordion-content Bunch of content.
+                    section
+                        h4.accordion-header Withdrawal Methods
+                        p.accordion-content Bunch of content
+                    section
+                        h4.accordion-header Deposit Methods
+                        p.accordion-content Bunch of content
+                    section
+                        h4.accordion-header Software
+                        p.accordion-content Bunch of content
+                    section
+                        h4.accordion-header Currencies
+                        p.accordion-content Bunch of content
+                    section
+                        h4.accordion-header Languages
+                        p.accordion-content Bunch of content
+                    section
+                        h4.accordion-header Licenses
+                        p.accordion-content Bunch of content
+
+                .ruled-title
+                    span BONUSES
+
+                .casino-bonus-block
+                    .casino-bonus
+                        .casino-bonus__top
+                            amp-img.casino-pg__img(src="assets/images/card-images/betFair.png", width="200", height="200", layout="responsive", alt="a sample image")
+                            .casino-bonus__top--code
+                                span code: GUTSB1
+                        .casino-bonus__bottom
+                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                            p Welcome Bonus
+                            a(href="") GET NOW
+                    .casino-bonus
+                        .casino-bonus__top
+                            amp-img.casino-pg__img(src="assets/images/card-images/betFair.png", width="200", height="200", layout="responsive", alt="a sample image")
+                            .casino-bonus__top--code
+                                span code: GUTSB1
+                        .casino-bonus__bottom
+                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                            p Welcome Bonus
+                            a(href="") GET NOW
+
+
+
+
+
+
+
+

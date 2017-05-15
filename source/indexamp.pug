@@ -20,10 +20,12 @@ html(amp)
 
 
 
+
     body
 
         include includes/svg/svg
         //include includes/casino-card/casino-card
+            //TODO SVG HAS STYLE DISPLAY NONE IN IT
 
         // logo image
         - imgLogo01 = "./assets/images/card-images/simbaGames.png"
@@ -138,11 +140,9 @@ html(amp)
 
 
 
-
             .about-us
-                .about-us__title
-                    hr
-                    h2.about-us__title--position About US
+                .ruled-title
+                    span About US
                 .about-us__cards
                     .about-us__card
                         .about-us__img

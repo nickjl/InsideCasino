@@ -14,9 +14,9 @@ $casino-color-2: black;
     &__offer {
 
       &--box {
-        border: 3px solid lighten($casino-color-2, 40%); //TODO
+        border: 3px solid lighten($casino-color-2, 20%); //TODO
 
-        h2 {
+        b {
           color: $casino-color-2;
         }
       }
@@ -33,11 +33,13 @@ $casino-color-2: black;
       }
     }
 
+    h2 {
+      color: lighten($casino-color-2, 40%);
+    }
+
   }
 
-  h2 {
-    color: lighten($casino-color-2, 40%);
-  }
+
 
   .iconCollor {
     fill: $casino-color-2; //TODO
@@ -55,10 +57,9 @@ $casino-color-2: black;
 
   .casino-bonus {
     background: lighten($casino-color-1, 40%);
-    margin: 1%;
 
     &__top {
-      background-color: lighten($casino-color-2, 40%); //TODO
+      background-color: $casino-color-1; //TODO
       position: relative;
 
       &--code {
@@ -74,12 +75,13 @@ $casino-color-2: black;
       }
 
       p {
-        color: lighten($casino-color-2, 25%);
+        color: lighten($casino-color-2, 30%);
       }
     }
 
 
   }
+
 
 
 }

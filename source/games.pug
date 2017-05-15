@@ -1,0 +1,121 @@
+extends includes/layout
+
+append css
+    style
+        //include ../app/css/casinos/betfair.css
+
+
+block vars
+    - bodyId = "starburst";
+
+block content
+
+    include includes/svg/svg
+    include includes/casino-card/casino-card
+
+
+    .wrapper
+
+
+        section.game-info
+            .d-flex.flex-column.flex-sm-row
+                .game-info__img.d-flex.justify-content-center.px-2.my-sm-4
+                    img(src="assets/images/card-images/betFair.png")
+
+                .game-info__title.d-flex.flex-column.px-4.py-sm-4.justify-content-around.align-items-center
+                    h1 STARBURST
+                    p offered by
+                        a.pl-1(href="") CRYPTOLOGIC
+                    h2 5 5 5 5 5
+
+                .game-info__play.ml-sm-auto.d-flex.align-items-center.pr-sm-4.justify-content-center
+                    a(href="") Play now
+
+        section.game-summary
+            .d-flex.flex-column.flex-lg-row.justify-content-around
+                .d-flex.justify-content-center.align-items-center.game-summary__width.px-4
+                    img.img-fluid.game-summary__demo(src="http://placekitten.com/g/650/400")
+
+                .game-summary__attributes.d-flex.flex-column.justify-content-center.game-summary__width.py-4
+                    .flex-row.d-flex.justify-content-around.px-2.flex-wrap
+                        .game-summary__icons--box
+                            svg.tablet(viewBox="0 0 110 110")
+                                use(xlink:href="#i_tablet" x="0" y="0")
+                            p.p-1.p-md-2 Mobile Version
+                        .game-summary__icons--box
+                            svg.vip(viewBox="0 0 110 110")
+                                use(xlink:href="#i_vip" x="0" y="0")
+                            p.p-1.p-md-2 5 Reels
+                        .game-summary__icons--box
+                            svg.live(viewBox="0 0 110 110")
+                                use(xlink:href="#i_live" x="0" y="0")
+                            p.p-1.p-md-2 Free Spins
+                        .game-summary__icons--box
+                            svg.mobile(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile" x="0" y="0")
+                            p.p-1.p-md-2 Video Games
+                        .game-summary__icons--box
+                            svg.desk(viewBox="0 0 110 110")
+                                use(xlink:href="#i_desk" x="0" y="0")
+                            p.p-1.p-md-2 Progressive Slot
+                        .game-summary__icons--box
+                            svg.paypal(viewBox="0 0 110 110")
+                                use(xlink:href="#i_paypal" x="0" y="0")
+                            p.p-1.p-md-2 BONUS Games
+                    .game-summary__attributes--list
+                        h2 Attributes
+                        ul.d-flex.flex-row.flex-wrap.px-2
+                            li.py-2.mx-2 Paylines
+                                span.float-right 10
+                            li.py-2.mx-2 Multipliers
+                                span.float-right yes
+                            li.py-2.mx-2 Jackpot Win
+                                span.float-right £250,000
+                            li.py-2.mx-2 Scatter Symbol
+                                span.float-right no
+                            li.py-2.mx-2 Volatility
+                                span.float-right Low
+                            li.py-2.mx-2 Wild Symbol
+                                span.float-right yes
+                            li.py-2.mx-2 RTP
+                                span.float-right 96%
+
+        section
+            .container-fluid
+                .d-flex.flex-column.flex-md-row
+                    .d-flex.flex-column.casino-info__width.p-2.game-details
+                        p.
+                            QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                            along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                            Queen Vegas Casino does not accept players from the United States.
+
+                        h2 QueenVegas Casino Bonuses
+                        p.
+                            QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                            along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                            Queen Vegas Casino does not accept players from the United States.
+                        p.
+                            QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                            along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                            Queen Vegas Casino does not accept players from the United States.
+
+                        a.casino-pg__playNow(href="") Play now
+
+                    .casino-info__width.p-2
+                        h2.casino-c__blue--group Play Starburst
+                            a.float-right(href='')
+                                span.casino-c__blue--group view all
+                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "Video Slot", "the offer details", "")
+                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "PaddyPower Casino", "the offer details", "")
+                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "BetWay Casino", "the offer details", "")
+                        +casino-c("rate-color2", "casino-c__blue", "assets/images/card-images/betFair.png" , "BetFair Casino", "the offer details", "")
+                        +casino-c("rate-color3", "casino-c__blue", "assets/images/card-images/betFair.png" , "888 Casino", "the offer details", "")
+
+
+
+
+
+
+append scripts
+    script(src='assets/js/tether.min.js')
+    script(src='assets/js/bootstrap.min.js')

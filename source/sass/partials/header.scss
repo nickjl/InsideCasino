@@ -93,6 +93,7 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    white-space: nowrap;
   }
 
   .header-slider .first-image h1 {
@@ -118,6 +119,8 @@
   .header-slider div {
     display: inline-block;
     width: 50%;
+    white-space: normal;
+    margin-right: -5px;
   }
   .header-slider div.second-image {
     position: relative;
@@ -157,6 +160,7 @@
 @media screen and (min-width: 992px){
   .header-slider div {
     float: left;
+    margin-right: 0;
   }
   .header-slider div.second-image {
     width: 50%;
@@ -185,3 +189,4 @@
     font-size: 0.9rem;
   }
 }
+
