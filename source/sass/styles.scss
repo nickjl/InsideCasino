@@ -75,6 +75,7 @@ body, input, button, a, h2, h1 {
 .wrapper {
   max-width: 1500px;
   margin: auto;
+  clear: both;
 }
 
 
@@ -115,9 +116,7 @@ h4, p, a {
 @import "partials/individual-casino";
 @import "partials/individual-game";
 
-.casino-cards {
-  clear: both;
-}
+
 
 
 
