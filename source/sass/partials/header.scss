@@ -25,6 +25,7 @@
   -webkit-box-shadow: none!important; /* these two shadows */
   box-shadow: none!important;
   background: transparent;
+  margin-bottom: 0;
 }
 
 .header-slider p {
@@ -47,7 +48,7 @@
 }
 
 .slider-wrapper {
-  max-width: 1200px;
+  max-width: 400px;
   display: block;
   margin: auto;
 }
@@ -75,12 +76,17 @@
 
   .second-image {
     height: 100vw;
+    max-height: 430px;
   }
 
 }
 
 
 @media screen and (min-width: 768px){
+  .slider-wrapper {
+    max-width: 1200px;
+  }
+
   .header-slider div.arrow {
     display: block;
     position: absolute;
