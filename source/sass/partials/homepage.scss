@@ -13,6 +13,10 @@ $offer-color: $theme-color-1;
   font-size: 0.6rem;
 }
 
+.offer-group h2 {
+  color: $theme-color-1;
+}
+
 .offer .casino-c__more {
   border-radius: 0;
   color: $offer-color;
@@ -30,12 +34,19 @@ $offer-color: $theme-color-1;
 
 }
 
-.casino-cards .col-xl-8 h1 {
-  float: left;
+.casino-cards h2 {
+  text-align: left;
 }
 
-.casino-cards .col-xl-8 h2 {
-  float: right;
+.casino-cards a span {
+  font-family: $header-font;
+}
+
+.casino-cards a.center-link span {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2em;
 }
 
 .casino-cards .col-xl-8 div:first-of-type {
@@ -46,7 +57,7 @@ $offer-color: $theme-color-1;
   display: none;
 }
 
-a h2:hover {
+a span:hover {
   text-decoration: underline;
 }
 

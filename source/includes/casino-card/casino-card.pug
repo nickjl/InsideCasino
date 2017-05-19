@@ -1,10 +1,10 @@
-// pop up icon mixin
+//- pop up icon mixin
 mixin pop(toggle, placement, trigger, title, content, name)
    li(data-container="body" data-toggle= toggle data-placement= placement data-trigger= trigger title= title data-content= content)
        .iconColor
            svg(viewBox="0 0 110 110" width="40" height="40")
                use(xlink:href= name x="0" y="0")
-// card mixin
+//- card mixin
 mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
    .casino-c.d-flex.align-items-stretch.justify-content-start.flex-column.flex-sm-row(class= rateColor + " " + cardColor + " " + icons)
        .casino-c__first.d-flex
@@ -25,7 +25,7 @@ mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
            .casino-c__ctaAndRatingContainer.ml-auto.d-flex.flex-row.justify-content-between.flex-sm-column
                .casino-c__rating.mt-auto
                    p.text-center
-                       span.casino-c__rating__title our Rating
+                       span.casino-c__rating__title Rating:
                        span.casino-c__rating_value 80/90
                .casino-c__cta.align-self-end
                    .btn-group(role='group', aria-label='example')

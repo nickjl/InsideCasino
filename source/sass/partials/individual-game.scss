@@ -4,7 +4,6 @@ $game-color: blue;
   border-bottom: 15px solid lighten($game-color, 10%);
 
   &__img {
-    border-right: 1px solid black;
 
     img {
       max-height: 150px;
@@ -46,8 +45,7 @@ $game-color: blue;
 
       svg {
         height: 60px;
-        margin: auto;
-        display: flex;
+        fill: currentColor;
       }
     }
 
@@ -82,13 +80,26 @@ $game-color: blue;
   margin-top: 4rem;
 
   h2 {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  &__headings h2 {
     color: #96999B;
     margin: 1.5rem 0;
-    text-align: left;
   }
+
+
 }
 
 @media (min-width: 576px) {
+  .game-info {
+
+    &__img {
+      border-right: 1px solid black;
+    }
+  }
+
   .game-summary {
     &__icons {
       &--box {
@@ -129,5 +140,7 @@ $game-color: blue;
     }
 
   }
+
+
 
 }

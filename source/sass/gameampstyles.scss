@@ -1,5 +1,7 @@
 @import "./partials/variables";
 
+$game-color: blue;
+
 // card style mixin
 @mixin colorCard($cardColor, $cardBGColor, $cardbottomBorder) {
   background: $cardBGColor;
@@ -162,166 +164,110 @@
   }
 }
 
-
-.carousel-container, .card-container {
+.wrapper {
+  max-width: 600px;
   margin: auto;
-
-  a{
-    text-decoration: none;
-  }
-}
-
-.carousel-container {
-  max-width: 400px;
-}
-
-.card-container h2 {
-  padding-left: 15px;
-  font-size: 1.4rem;
-}
-
-.icons {
-  display: none;
-}
-
-.view-all {
-  margin: auto;
-  text-decoration: none;
-}
-
-a h2 {
-  text-align: center;
-}
-
-a h2:hover {
-  text-decoration: underline;
-}
-
-.offer {
-  display: flex;
-  position: relative;
-
-  a {
-    position: absolute;
-    bottom: -20px;
-    width: 43%;
-    padding: 8px 0;
-    font-size: 0.9rem;
-  }
-
-
-
-  .casino-c__more {
-    color: $theme-color-1;
-    border: 4px solid $theme-color-1;
-    display: block;
-    background-color: #FFFFFF;
-    left: 2.5%;
-    overflow: hidden;
-  }
-
-  .casino-c__play-now {
-    border: 4px solid $theme-color-1;
-    color: #FFFFFF;
-    background-color: $theme-color-1;
-    right: 2.5%;
-  }
-
-
-
-  &__terms {
-    padding: 10px 15px;
-    font-size: 0.8rem;
-    text-align: center;
-    color: $font-color;
-  }
-
-}
-
-.about-us {
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
-
-  }
-  &__card {
-    width: 100%;
-    padding: 15px;
-
-    h2 {
-      text-align: center;
-      color: $theme-color-2;
-    }
-
-    a {
-      text-align: center;
-      color: $theme-color-1;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    &--purple {
-      background-color: lighten($theme-color-2, 50%);
-    }
-
-  }
-
-
-  &__img {
-    width: 50%;
-    margin: auto;
-  }
-}
-
-.ruled-title {
-  width: 100%;
-  height: 20px;
-  border-bottom: 1px solid lighten($theme-color-2, 50%);
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.ruled-title span {
-  color: $font-color;
-  font-size: 1.5rem;
-  background: white;
-  padding: 0 10px;
 }
 
 .svg-hide{
   display: none;
 }
 
-h2, span {
-  font-family: 'Poller One', sans-serif;
+
+.game-info {
+  border-bottom: 15px solid lighten($game-color, 10%);
+  text-align: center;
+  padding-bottom: 1.5rem;
+
+  &__img {
+
+    amp-img {
+      max-width: 200px;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    h1 {
+      color: $game-color;
+    }
+    a {
+      color: $game-color;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__play {
+    a {
+      background: $game-color; //TODO
+      margin: 10px auto;
+      padding: 10px 25px;
+      color: #ffffff; //TODO
+      font-family: $header-font, $body-font;
+    }
+  }
+
 }
 
-h2 {
-  font-size: 1.2rem;
+.game-summary {
+  background-color: lighten($game-color, 40%);
+  color: lighten($game-color, 20%);
+
+  &__icons {
+    &--box {
+      width: calc(100%/3);
+      text-align: center;
+
+      svg {
+        height: 60px;
+        fill: currentColor;
+      }
+    }
+
+
+  }
+
+  &__attributes {
+
+    &--list {
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          width: 100%;
+          border-bottom: 1px solid $game-color;
+          font-family: $body-font;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+
+
+
+  }
+
 }
 
-hr {
-  border-top: 1px solid lighten($theme-color-2, 50%);
+.game-details {
+  margin-top: 4rem;
+
+  h2 {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  &__headings h2 {
+    color: #96999B;
+    margin: 1.5rem 0;
+  }
+
+
 }
-
-body {
-  font-family: sans-serif;
-}
-
-.wrapper {
-  max-width: 600px;
-  margin: auto;
-}
-
-
-
-
-
-
-
 
 
 

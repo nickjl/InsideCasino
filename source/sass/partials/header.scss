@@ -2,12 +2,12 @@
   position: relative;
 }
 
-.first-image h1, .third-image h1, .first-image p, .third-image p {
+.first-image h2, .third-image h2, .first-image p, .third-image p {
   position: absolute;
   left: 10px;
 }
 
-.first-image h1, .third-image h1 {
+.first-image h2, .third-image h2 {
   bottom: 30%;
 }
 
@@ -31,9 +31,11 @@
   font-size: 0.8rem;
 }
 
-.header-slider h1 {
+.header-slider h2 {
   font-size: 1.5rem;
   margin-top: 0;
+  text-align: left;
+  color: #ffffff;
 }
 
 .header-slider a, .header-slider a:hover {
@@ -58,12 +60,12 @@
 }
 
 @media (max-width: 767px) {
-  .second-image h1, .second-image p {
+  .second-image h2, .second-image p {
     position: absolute;
     left: 10px;
   }
 
-  .second-image h1 {
+  .second-image h2 {
     bottom: 30%;
   }
 
@@ -72,7 +74,7 @@
   }
 
   .second-image {
-    height: 97vw;
+    height: 100vw;
   }
 
 }
@@ -96,15 +98,15 @@
     white-space: nowrap;
   }
 
-  .header-slider .first-image h1 {
+  .header-slider .first-image h2 {
     font-size: 2.2rem;
   }
 
-  .header-slider .second-image h1 {
+  .header-slider .second-image h2 {
     font-size: 1.5rem;
   }
 
-  .header-slider .third-image h1 {
+  .header-slider .third-image h2 {
     font-size: 1.1rem;
   }
 
@@ -143,12 +145,12 @@
     position: relative;
   }
 
-  .second-image h1, .second-image p {
+  .second-image h2, .second-image p {
     position: absolute;
     left: 10px;
   }
 
-  .second-image h1 {
+  .second-image h2 {
     bottom: 30%;
   }
 
@@ -171,7 +173,7 @@
     height: 50%;
   }
 
-  .header-slider .first-image h1 {
+  .header-slider .first-image h2 {
     font-size: 2.5rem;
   }
 
@@ -181,7 +183,7 @@
 
 
 
-  .header-slider .second-image h1 {
+  .header-slider .second-image h2 {
     font-size: 1.8rem;
   }
 

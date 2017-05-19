@@ -3,6 +3,10 @@ $(document).ready(function(){
         slideWidth: 400,
         auto: true,
         controls: false,
-        pager: true
+        pager: true,
+        onSliderLoad: function(){
+            $(".gallery-slider").css("visibility", "visible");
+        }
     });
 });
+

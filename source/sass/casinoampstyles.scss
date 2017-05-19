@@ -132,22 +132,26 @@ $color-template-2: black;
 
   &__icons {
     display: inline-flex;
+    color: $color-template-2;
+    margin: 2rem auto;
 
     @if $help {
       background-color: blue;
     }
 
     svg {
-      height: 60px;
-      fill: transparent;
+      height: 50px;
+      fill: currentColor;
     }
 
     &--box {
       text-align: center;
+      padding: 0 2px;
     }
 
     p {
-      color: $color-template-2
+      color: $color-template-2;
+      font-size: 0.8rem;
     }
 
   }
@@ -172,13 +176,16 @@ $color-template-2: black;
 
 
   &__playNow {
-    padding: 10px;
-    background-color: $theme-color-1;
+    padding: 10px 0;
+    background-color: $color-template-1;
     color: white;
     width: 100%;
     text-align: center;
     font-family: $header-font, $body-font;
     margin-top: 2rem;
+    font-size: 1.2rem;
+    display: block;
+
   }
 
 
@@ -188,9 +195,6 @@ $color-template-2: black;
   display: none;
 }
 
-.iconCollor {
-  fill: $color-template-2; //TODO
-}
 
 amp-accordion .accordion-header {
   background-color: #FFFFFF;
@@ -209,7 +213,7 @@ amp-accordion .accordion-content {
 
 
 .casino-info {
-  padding: 3rem 15px;
+  padding: 2rem 15px;
 
   .card {
     border: none;
@@ -224,12 +228,12 @@ amp-accordion .accordion-content {
 
 
   .casino-bonus {
-    background: $color-template-1;
-    max-width: 60%;
+    background: lighten($color-template-1, 40%);
+    //max-width: 60%;
     margin: 1rem auto;
 
     &__top {
-      background-color: lighten($color-template-2, 40%); //TODO
+      background-color: $color-template-1; //TODO
       position: relative;
 
       amp-img {
@@ -246,10 +250,13 @@ amp-accordion .accordion-content {
         bottom: -20px;
         left: 12.5%;
         font-size: 1rem;
-        font-family: $body-font;
         font-weight: 600;
         color: lighten($color-template-2, 10%); //TODO
-        padding: 12px;
+        padding: 12px 0;
+
+        span {
+          font-family: $body-font;
+        }
 
 
       }
@@ -259,6 +266,7 @@ amp-accordion .accordion-content {
       padding: 15px;
       a{
         font-family: $header-font;
+        color: $color-template-1;
       }
 
       h2 {
@@ -272,11 +280,28 @@ amp-accordion .accordion-content {
       }
     }
 
+  }
 
+  &__pros {
+    list-style-image: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png');
+  }
 
+  &__cons {
+    list-style-image: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png');
+  }
 
+  &__thumbnail {
+    width: 27%;
+    display: inline-flex;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    margin: 2%;
+  }
 
-
+  &__thumb {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 

@@ -39,8 +39,9 @@ $rate-color3: #FF2626;
     }
 
     &__icons {
+      color: $cardColor;
       svg {
-        fill: $cardColor;
+        fill: currentColor;
       }
     }
   }
@@ -202,7 +203,7 @@ section .top:first-child {
   .casino-c__cta {
     .btn-group {
       .btn {
-        width: 100px;
+        width: 96px;
       }
     }
   }
@@ -236,12 +237,18 @@ section .top:first-child {
     }
 
     &__icons {
+      padding: 0;
       ul {
         width: 100%;
         padding-bottom: 1rem;
 
         li {
           margin-left: 0.5rem;
+
+          svg {
+            width: 36px;
+            height: 36px;
+          }
         }
       }
     }

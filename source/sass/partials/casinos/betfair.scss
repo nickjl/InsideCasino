@@ -28,8 +28,14 @@ $casino-color-2: black;
     }
 
     &__icons {
+      color: $casino-color-2;
+
       p {
         color: $casino-color-2;
+      }
+
+      svg {
+        fill: currentColor;
       }
     }
 
@@ -40,10 +46,6 @@ $casino-color-2: black;
   }
 
 
-
-  .iconCollor {
-    fill: $casino-color-2; //TODO
-  }
 
 
   .bx-wrapper .bx-pager.bx-default-pager a {

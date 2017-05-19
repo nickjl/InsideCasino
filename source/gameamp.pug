@@ -1,0 +1,191 @@
+doctype
+html(amp)
+    head
+        meta(charset="utf-8")
+        script(async, src="https://cdn.ampproject.org/v0.js")
+        //script(async, custom-element="amp-carousel", src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+        //script(async, custom-element="amp-accordion", src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js")
+        link(rel="canonical", href="<%host%>/introduction/hello_world")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poller+One")
+        meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+
+        style(amp-custom)
+            include ../app/css/ampgame.css
+
+        | <style amp-boilerplate>
+        include assets/css/ampboilerplate.css
+        | </style><noscript><style amp-boilerplate>
+        include assets/css/ampcss2.css
+        | </style></noscript>
+
+
+
+
+
+    body
+
+        include includes/svg/svg
+        //include includes/casino-card/casino-card
+            //TODO SVG HAS STYLE DISPLAY NONE IN IT
+
+        // logo image
+        - imgLogo01 = "./assets/images/card-images/simbaGames.png"
+        - imgLogo02 = "./assets/images/card-images/rizk.png"
+        - imgLogo03 = "./assets/images/card-images/grosvenor.png"
+        - imgLogo04 = "./assets/images/card-images/dunder.png"
+        - imgLogo05 = "./assets/images/card-images/casumo.png"
+        - imgLogo06 = "./assets/images/card-images/videoSlots.png"
+        - imgLogo07 = "./assets/images/card-images/ppCasino.png"
+        - imgLogo08 = "./assets/images/card-images/betway.png"
+        - imgLogo09 = "./assets/images/card-images/betFair.png"
+        - imgLogo10 = "./assets/images/card-images/888.png"
+
+        - offert01 = "Shadow Bet Casino: 100% up to €300, 1st Deposit Bonus"
+        - offert02 = "Shadow Bet Casino: 50% up to €400, 2nd Deposit Bonus"
+        - offert03 = "Shadow Bet Casino: 25% up to €500, 3rd Deposit Bonus"
+        - offert04 = "Shadow Bet Casino: Whole year of Free Spins up to 520 Free Spins"
+        - offert05 = "Shadow Bet Casino: From 5 up to 50 Free Spins"
+
+        mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
+            .casino-c(class= rateColor + " " + cardColor + " " + icons)
+                .casino-c__img
+                    amp-img(src= logo, width="200", height="200", layout="responsive", alt="a sample image")
+                .casino-c__details
+                    h4.casino-c__casino-title= name
+                    p= offer
+                .casino-c__icons
+                    ul
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_tablet" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_live" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_vip" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_mobile-desk" x="0" y="0")
+                        li
+                            svg(viewBox="0 0 110 110")
+                                use(xlink:href="#i_paypal" x="0" y="0")
+                .casino-c__rating
+                    p
+                        span.casino-c__rating__title Rating:
+                        span.casino-c__rating__value 80/90
+                .casino-c__buttons
+                    a.casino-c__more(href="") More
+                    a.casino-c__play-now(href="") Play now
+
+
+
+        .wrapper
+
+
+            section.game-info
+                div
+                    .game-info__img
+                        amp-img(src="assets/images/card-images/betFair.png", width="200", height="200", layout="responsive", alt="a sample image")
+
+                    .game-info__title
+                        h1 STARBURST
+                        p offered by
+                            a.pl-1(href="") CRYPTOLOGIC
+                        h2 5 5 5 5 5
+
+                    .game-info__play
+                        a(href="") Play now
+
+            section.game-summary
+                div
+                    .game-summary__width
+                        amp-img.game-summary__demo(src="http://placekitten.com/g/650/400", width="650", height="400", layout="responsive", alt="a sample image")
+
+                    .game-summary__attributes.game-summary__width
+                        div
+                            .game-summary__icons--box
+                                svg.tablet(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_tablet" x="0" y="0")
+                                p Mobile Version
+                            .game-summary__icons--box
+                                svg.vip(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_vip" x="0" y="0")
+                                p 5 Reels
+                            .game-summary__icons--box
+                                svg.live(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_live" x="0" y="0")
+                                p Free Spins
+                            .game-summary__icons--box
+                                svg.mobile(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_mobile" x="0" y="0")
+                                p Video Games
+                            .game-summary__icons--box
+                                svg.desk(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_desk" x="0" y="0")
+                                p Progressive Slot
+                            .game-summary__icons--box
+                                svg.paypal(viewBox="0 0 110 110")
+                                    use(xlink:href="#i_paypal" x="0" y="0")
+                                p BONUS Games
+                        .game-summary__attributes--list
+                            h2 Attributes
+                            ul
+                                li Paylines
+                                    span 10
+                                li Multipliers
+                                    span yes
+                                li Jackpot Win
+                                    span £250,000
+                                li Scatter Symbol
+                                    span no
+                                li Volatility
+                                    span Low
+                                li Wild Symbol
+                                    span yes
+                                li RTP
+                                    span 96%
+
+            section.game-details
+                div
+                    div
+                        .casino-info__width.game-details__headings
+                            p.
+                                QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                                along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                                Queen Vegas Casino does not accept players from the United States.
+
+                            h2 QueenVegas Casino Bonuses
+                            p.
+                                QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                                along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                                Queen Vegas Casino does not accept players from the United States.
+                            p.
+                                QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                                along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                                Queen Vegas Casino does not accept players from the United States.
+
+                            h2 QueenVegas Casino Bonuses
+                            p.
+                                QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                                along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                                Queen Vegas Casino does not accept players from the United States.
+                            p.
+                                QueenVegas Casino is a sleek online casino that offers a wide range of games. They use Cryptologic (WagerLogic) and SkillOnNet software for their virtual casino games,
+                                along with a full live dealer lounge. The casino is licensed by the jurisdiction of Malta, Denmark, Germany (Schleswig - Holstein) and United Kingdom. Due to legal issues,
+                                Queen Vegas Casino does not accept players from the United States.
+
+                            a.casino-pg__playNow(href="") Play now
+
+                        .casino-info__width.game-details__play
+                            h2.casino-c__blue--group Play Starburst
+                                a(href='')
+                                    span.casino-c__blue--group view all
+                            +casino-c("rate-color1", "casino-c__red", imgLogo01 , "Simba Games", offert01, "casino-c__icons--visible")
+                            +casino-c("rate-color2", "casino-c__red", imgLogo02 , "Rizk", offert03, "casino-c__icons--visible")
+                            +casino-c("rate-color1", "casino-c__red", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c__icons--visible")
+                            +casino-c("rate-color2", "casino-c__red", imgLogo04 , "Dunder", offert04, "casino-c__icons--visible")
+                            +casino-c("rate-color3", "casino-c__red", imgLogo05 , "Casumo", offert05, "casino-c__icons--visible")

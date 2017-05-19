@@ -3,7 +3,7 @@ extends includes/layout
 block content
     include includes/svg/svg
 
-        // logo image
+        //- logo image
         - imgLogo01 = "./assets/images/card-images/simbaGames.png"
         - imgLogo02 = "./assets/images/card-images/rizk.png"
         - imgLogo03 = "./assets/images/card-images/grosvenor.png"
@@ -23,41 +23,6 @@ block content
 
 
 
-
-
-        // pop up icon mixin
-        //mixin pop(toggle, placement, trigger, title, content, name)
-            li(data-container="body" data-toggle= toggle data-placement= placement data-trigger= trigger title= title data-content= content)
-                .iconColor
-                    svg(viewBox="0 0 110 110" width="40" height="40")
-                        use(xlink:href= name x="0" y="0")
-        // card mixin
-        //mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
-            .casino-c.d-flex.align-items-stretch.justify-content-start.flex-column.flex-sm-row(class= rateColor + " " + cardColor + " " + icons)
-                .casino-c__first.d-flex
-                    .casino-c__logo.align-self-center
-                        img(src= logo)
-                    .casino-c__casinoInfo.align-self-center
-                        h4.casino-c__casino-title= name
-                        p.casino-c__casino-offer= offer
-                .casino-c__second.d-flex.ml-auto.flex-column.flex-sm-row
-                    .casino-c__icons.align-self-center
-                        ul.list-unstyled.mb-0.d-inline-flex.flex-wrap.justify-content-sm-around.justify-content-center
-                            +pop("popover", "top", "hover", "Available", "on desktop, tablet & mobile", "#i_tablet")
-                            +pop("popover", "top", "hover", "", "Live Dealer", "#i_mobile")
-                            +pop("popover", "top", "hover", "", "Dwnloadable App", "#i_live")
-                            +pop("popover", "top", "hover", "VIP", "Program available", "#i_vip")
-                            +pop("popover", "top", "hover", "Payment", "Paypal Available", "#i_mobile-desk")
-                            +pop("popover", "top", "hover", "", "mobile", "#i_paypal")
-                    .casino-c__ctaAndRatingContainer.ml-auto.d-flex.flex-row.justify-content-between.flex-sm-column
-                        .casino-c__rating.mt-auto
-                            p.text-center
-                                span.casino-c__rating__title our Rating
-                                span.casino-c__rating_value 80/90
-                        .casino-c__cta.align-self-end
-                            .btn-group(role='group', aria-label='example')
-                                button.btn.btn-secondary.casino-c__more(type='button') More
-                                button.btn.btn-secondary.casino-c__playNow(type='button') Play Now
         .wrapper
             .container-fluid.slider-wrapper-bg
                 .slider-wrapper
@@ -66,7 +31,7 @@ block content
                             .first-image
                                 a(href='')
                                     img(src='http://placekitten.com/g/900/900')
-                                    h1 Billy The Kid: A Born Loser?
+                                    h2 Billy The Kid: A Born Loser?
                                     p.
                                         World Casino Directory, one of the industries top sources for all matters land-based and online, has just become a part of the LCB family of websites.
                                         Keep reading to find out more about this new addition.
@@ -79,18 +44,18 @@ block content
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
                             .second-image
                                 a(href='')
-                                    h1 BtoBet CEO Key Speaker at Vienna International Gaming Expo 2017
+                                    h2.px-md-2 BtoBet CEO Key Speaker at Vienna International Gaming Expo 2017
                                     p.
                                         We are only showing bonuses that accept player from United Kingdom.
                                         If you would like to view all Slots bonuses click here.
                                     .arrow
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
                                             polygon.st0arrow(points='26.8,75 37.2,75 56.1,41.1 35.9,5 25.6,5 45.7,41.1 ')
-                            br
+                            br.hidden-sm-down
                             .third-image
                                 a(href='')
                                     img(src='http://placekitten.com/g/900/900')
-                                    h1 Dafabet seeks to Improve Player Engagement with Comtrade.
+                                    h2 Dafabet seeks to Improve Player Engagement with Comtrade.
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
@@ -98,7 +63,7 @@ block content
                             .third-image
                                 a(href='')
                                     img(src='http://placekitten.com/g/900/900')
-                                    h1 Dafabet seeks to Improve Player Engagement with Comtrade.
+                                    h2 Dafabet seeks to Improve Player Engagement with Comtrade.
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
@@ -106,7 +71,7 @@ block content
                             .third-image.hidden-lg-up
                                 a(href='')
                                     img(src='http://placekitten.com/g/900/900')
-                                    h1 Dafabet seeks to Improve Player Engagement with Comtrade.
+                                    h2 Dafabet seeks to Improve Player Engagement with Comtrade.
                                     p We are only showing bonuses that accept players from United Kingdom.
                                     .arrow.arrow-top
                                         svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 80 80', style='enable-background:new 0 0 80 80;', xml:space='preserve')
@@ -114,64 +79,63 @@ block content
             .container-fluid.casino-cards
                 .row
                     .col-12.col-md-6.col-xl-4.top-rated-1
-                        h1.casino-c__orange--group Top Rated Casino 1
+                        h2.casino-c__orange--group Top Rated Casino 1
                         +casino-c("rate-color1", "casino-c__orange", imgLogo01 , "Simba Games", offert01, "")
                         +casino-c("rate-color1", "casino-c__orange", imgLogo02 , "Rizk", offert02, "")
                         +casino-c("rate-color1", "casino-c__orange", imgLogo03 , "Grosvendor Casinos", offert03, "")
                         +casino-c("rate-color2", "casino-c__orange", imgLogo04 , "Dunder", offert04, "")
                         +casino-c("rate-color3", "casino-c__orange", imgLogo05 , "Casumo", offert05, "")
-                        a(href='/indexamp.html', class='casino-c__orange')
-                            h2.casino-c__orange--group view all
+                        a.center-link(href='/indexamp.html')
+                            span.casino-c__orange--group view all
 
                     .col-12.col-md-6.col-xl-4
-                        h1.casino-c__blue--group Recommended Casino
+                        h2.casino-c__blue--group Recommended Casino
                         +casino-c("rate-color1", "casino-c__blue", imgLogo06 , "Video Slot", offert01, "")
                         +casino-c("rate-color1", "casino-c__blue", imgLogo07 , "PaddyPower Casino", offert02, "")
                         +casino-c("rate-color1", "casino-c__blue", imgLogo08 , "BetWay Casino", offert04, "")
                         +casino-c("rate-color2", "casino-c__blue", imgLogo09 , "BetFair Casino", offert04, "")
                         +casino-c("rate-color3", "casino-c__blue", imgLogo10 , "888 Casino", offert04, "")
-                        a(href='', class='casino-c__blue')
-                            h2.casino-c__blue--group view all
+                        a.center-link(href='')
+                            span.casino-c__blue--group view all
 
                     .col-12.col-md-6.col-xl-4
-                        h1.casino-c__red--group Top Rated Casino 2
+                        h2.casino-c__red--group Top Rated Casino 2
                         +casino-c("rate-color1", "casino-c__red", imgLogo06 , "Video Slot", offert01, "")
                         +casino-c("rate-color1", "casino-c__red", imgLogo07 , "PaddyPower Casino", offert02, "")
                         +casino-c("rate-color1", "casino-c__red", imgLogo08 , "BetWay Casino", offert03, "")
                         +casino-c("rate-color2", "casino-c__red", imgLogo09 , "BetFair Casino", offert04, "")
                         +casino-c("rate-color3", "casino-c__red", imgLogo10 , "888 Casino", offert05, "")
-                        a(href='', class='casino-c__red')
-                            h2.casino-c__red--group view all
+                        a.center-link(href='')
+                            span.casino-c__red--group view all
 
                     .col-12.col-md-6.col-xl-4.offer-group
-                        h1 Best Offer
+                        h2 Best Offer
                         .offer
-                            img(src='http://placekitten.com/g/300/300')
-                            button.btn.btn-secondary.casino-c__more(type='button') Read the Review
+                            img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/300/300")
+                            button.btn.btn-secondary.casino-c__more(type='button') Read Review
                             button.btn.btn-secondary.casino-c__playNow(type='button') Play Now
                         p.
                             New customer only, Min Dep £10, Max Bonus £500 + 50 Spins on Starburts,
                             Slot only, 4 x conversion, 30 x Wagering + T&C's apply
 
                     .col-12.col-xl-8
-                        h1.casino-c__red--group Top Rated Casino
-                        a(href='', class='casino-c__red')
-                            h2.casino-c__red--group view all
+                        h2.casino-c__red--group Top Rated Casino
+                            a.float-right.hidden-xs-down(href='')
+                                span.casino-c__red--group view all
                         +casino-c("rate-color1", "casino-c__red", imgLogo01 , "Simba Games", offert01, "casino-c--icons_visible")
                         +casino-c("rate-color2", "casino-c__red", imgLogo02 , "Rizk", offert03, "casino-c--icons_visible")
                         +casino-c("rate-color1", "casino-c__red", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c--icons_visible")
                         +casino-c("rate-color2", "casino-c__red", imgLogo04 , "Dunder", offert04, "casino-c--icons_visible")
                         +casino-c("rate-color3", "casino-c__red", imgLogo05 , "Casumo", offert05, "casino-c--icons_visible")
+                        a.center-link.hidden-sm-up(href='')
+                            span.casino-c__red--group view all
 
             .container-fluid.about-us
-                //.about__title
-                    hr
-                    h2.about__title-position About US
                 .ruled-title
                     span About US
                 .row
                     .col-12.col-sm-6.col-lg-3
-                        img(src='http://placekitten.com/g/150/150')
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/150/150")
                         h2 Bonuses, Promotions and Free Spins
                         p.
                             Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
@@ -179,14 +143,14 @@ block content
                             wagering requirements.
                         a(href='') Read more
                     .col-12.col-sm-6.col-lg-3
-                        img(src='http://placekitten.com/g/150/150')
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/150/150")
                         h2 The Best Casino Site Reviews
                         p.
                             We will guide you through the casinos that you ought to know, emphasising quality, usability and passion. We'll point out the best and point out
                             the worst, each casino accompanied by a mathematically definitive rating out of 100. Your journey to find the best new casino sites begins here.
                         a(href='') Read more
                     .col-12.col-sm-6.col-lg-3
-                        img(src='http://placekitten.com/g/150/150')
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/150/150")
                         h2 Software
                         p.
                             Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
@@ -194,7 +158,7 @@ block content
                             wagering requirements.
                         a(href='') Read more
                     .col-12.col-sm-6.col-lg-3
-                        img(src='http://placekitten.com/g/150/150')
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/150/150")
                         h2 Payment Options
                         p.
                             We will guide you through the casinos that you ought to know, emphasising quality, usability and passion. We'll point out the best and point out
