@@ -131,9 +131,10 @@ $color-template-2: black;
   }
 
   &__icons {
-    display: inline-flex;
+    display: flex;
     color: $color-template-2;
     margin: 2rem auto;
+    justify-content: center;
 
     @if $help {
       background-color: blue;
@@ -210,10 +211,18 @@ amp-accordion .accordion-content {
 }
 
 
+.carousel-container {
+  max-width: 400px;
+  margin: auto;
+}
 
 
 .casino-info {
   padding: 2rem 15px;
+
+  h2 {
+    color: #96999B;
+  }
 
   .card {
     border: none;
@@ -225,12 +234,19 @@ amp-accordion .accordion-content {
     border-bottom: 1px solid $theme-color-1; //TODO
   }
 
+  .casino-bonus-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 
 
   .casino-bonus {
     background: lighten($color-template-1, 40%);
-    //max-width: 60%;
+    width: 90%;
     margin: 1rem auto;
+
+
 
     &__top {
       background-color: $color-template-1; //TODO
@@ -273,6 +289,7 @@ amp-accordion .accordion-content {
         font-family: $body-font;
         text-align: left;
         color: $color-template-2; //TODO
+        font-size: 1.2rem;
       }
 
       p {
@@ -345,7 +362,7 @@ body {
 }
 
 .wrapper {
-  max-width: 600px;
+  max-width: 740px;
   margin: auto;
 }
 
@@ -356,5 +373,19 @@ body {
       width: 20%;
       margin: 2%;
     }
+
+    .casino-bonus {
+      width: 45%;
+    }
+  }
+
+  .casino-pg {
+
+    &__icons {
+      &--box {
+        padding: 0 4px;
+      }
+    }
+
   }
 }
