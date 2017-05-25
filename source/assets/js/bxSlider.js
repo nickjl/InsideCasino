@@ -40,3 +40,17 @@ function init() {
             imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
         } } }
 window.onload = init;
+
+
+$(document).ready(function(){
+    $('.gallery-slider').bxSlider({
+        slideWidth: 400,
+        auto: true,
+        controls: false,
+        pager: true,
+        onSliderLoad: function(){
+            $(".gallery-slider").css("visibility", "visible");
+        }
+    });
+});
+
