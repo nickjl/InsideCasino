@@ -177,7 +177,8 @@ $game-color: blue;
 .game-info {
   border-bottom: 15px solid lighten($game-color, 10%);
   text-align: center;
-  padding-bottom: 1.5rem;
+  padding: 1rem 1.5rem 2.5rem 1.5rem;
+
 
   &__img {
 
@@ -190,13 +191,16 @@ $game-color: blue;
   &__title {
     h1 {
       color: $game-color;
+      font-family: $header-font, $body-font;
     }
     a {
       color: $game-color;
+      padding-left: 5px;
     }
     h2 {
       margin-top: 0;
     }
+
   }
 
   &__play {
@@ -246,7 +250,7 @@ $game-color: blue;
     &--list {
       ul {
         list-style-type: none;
-        padding: 15px;
+        padding: 1rem 15px 2rem 15px;
 
         li {
           width: 100%;
@@ -257,6 +261,7 @@ $game-color: blue;
 
           span {
             float: right;
+            color: #ffffff;
           }
         }
       }
@@ -277,6 +282,8 @@ $game-color: blue;
   h2 {
     text-align: left;
     margin-top: 0;
+    font-family: $header-font, $body-font;
+    font-size: 1.2rem;
   }
 
   &__headings {
@@ -303,6 +310,63 @@ $game-color: blue;
     justify-content: center;
   }
 
+
+}
+
+@media (min-width: 576px) {
+
+  .game-info {
+    display: flex;
+    justify-content: space-around;
+
+
+    &__img {
+      width: 25%;
+      padding-right: 50px;
+      border-right: 1px solid black;
+
+    }
+
+    &__title {
+
+    }
+
+    &__play {
+      display: flex;
+      align-items: center;
+
+    }
+
+  }
+
+  .game-summary {
+
+
+    &__attributes {
+
+
+      &--list {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          li {
+            width: 49%;
+            display: inline-flex;
+            justify-content: space-between;
+
+          }
+        }
+
+      }
+
+
+
+
+    }
+
+  }
 
 }
 

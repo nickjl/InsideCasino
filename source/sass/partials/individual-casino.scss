@@ -139,6 +139,7 @@ $color-template-2: yellow;
   &__details {
     background-color: rgba(0,0,0,0.5);
 
+
     p {
       color: white;
     }
@@ -314,12 +315,14 @@ $color-template-2: yellow;
 
     &__details {
       border-top-right-radius: 80px;
-      height: 70%;
+      min-height: 50%;
     }
 
   }
 
   .casino-info {
+
+
 
     &__width {
       width: 50%;
@@ -340,6 +343,11 @@ $color-template-2: yellow;
 @media (min-width: 992px) {
 
   .casino-info {
+
+    .casino-bonus {
+      width: 22%;
+      margin: auto;
+    }
 
     .casino-bonus {
       max-width: 220px;

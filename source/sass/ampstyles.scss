@@ -116,6 +116,10 @@
 
   &__rating {
     text-align: center;
+
+    span {
+      font-family: $body-font;
+    }
   }
   &__play-now, &__more {
     width: 50%;
