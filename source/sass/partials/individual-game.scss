@@ -54,6 +54,10 @@ $game-color: blue;
 
   &__attributes {
 
+    h2, span {
+      color: #ffffff;
+    }
+
     &--list {
       ul {
         list-style-type: none;
@@ -112,10 +116,6 @@ $game-color: blue;
     }
 
     &__attributes {
-
-      h2, span {
-        color: #ffffff;
-      }
 
       &--list {
         ul {

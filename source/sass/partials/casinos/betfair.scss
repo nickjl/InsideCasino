@@ -2,19 +2,18 @@ $casino-color-1: orange;
 $casino-color-2: black;
 
 
-
 #betfair {
   .casino-pg {
-    background-color: $casino-color-1; //TODO
-    border-bottom: 15px solid $casino-color-2; //TODO
+    background-color: $casino-color-1;
+    border-bottom: 15px solid $casino-color-2;
     &--dot {
-      background-color: green; //TODO
+      background-color: green;
     }
 
     &__offer {
 
       &--box {
-        border: 3px solid lighten($casino-color-2, 20%); //TODO
+        border: 3px solid lighten($casino-color-2, 20%);
 
         b {
           color: $casino-color-2;
@@ -22,8 +21,8 @@ $casino-color-2: black;
       }
 
       &--playNow {
-        background: $casino-color-2; //TODO
-        color: $casino-color-1; //TODO
+        background: $casino-color-2;
+        color: $casino-color-1;
       }
     }
 
@@ -49,19 +48,19 @@ $casino-color-2: black;
 
 
   .bx-wrapper .bx-pager.bx-default-pager a {
-    background: $casino-color-1; //TODO
-    border: 3px solid $casino-color-2; //TODO
+    background: $casino-color-1;
+    border: 3px solid $casino-color-2;
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: $casino-color-2; //TODO
+    background: $casino-color-2;
   }
 
   .casino-bonus {
     background: lighten($casino-color-1, 40%);
 
     &__top {
-      background-color: $casino-color-1; //TODO
+      background-color: $casino-color-1;
       position: relative;
 
       &--code {

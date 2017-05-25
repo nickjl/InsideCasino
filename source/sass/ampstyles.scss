@@ -316,6 +316,17 @@ body {
   margin: auto;
 }
 
+@media (min-width: 576px) {
+
+  .about-us {
+    &__card {
+      width: 46%;
+      padding: 2%;
+    }
+  }
+
+}
+
 
 
 

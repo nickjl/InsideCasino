@@ -227,7 +227,7 @@ $game-color: blue;
       flex-direction: column;
 
       svg {
-        height: 60px;
+        height: 50px;
         fill: currentColor;
       }
     }
@@ -240,6 +240,7 @@ $game-color: blue;
     h2 {
       text-align: center;
       color: #ffffff;
+      font-family: $header-font, $body-font;
     }
 
     &--list {
@@ -270,16 +271,36 @@ $game-color: blue;
 }
 
 .game-details {
-  margin-top: 4rem;
+  margin: 1rem 0;
+  padding: 15px;
 
   h2 {
     text-align: left;
     margin-top: 0;
   }
 
-  &__headings h2 {
-    color: #96999B;
-    margin: 1.5rem 0;
+  &__headings {
+    margin-bottom: 1rem;
+    h2 {
+      color: #96999B;
+      margin: 1.5rem 0;
+    }
+  }
+
+  &__play a span {
+      float: right;
+    }
+
+  &__playNow {
+    padding: 10px 0;
+    margin: 3rem 0;
+    background-color: $theme-color-1;
+    color: white;
+    text-align: center;
+    font-family: $header-font, $body-font;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
   }
 
 
