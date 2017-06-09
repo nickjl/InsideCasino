@@ -72,6 +72,9 @@ module.exports = function (grunt) {
         },
 
         uglify: {
+            options: {
+                mangle: false
+            },
             my_target: {
                 files: {
                     'app/assets/js/bxSlider.min.js': ['source/assets/js/bxSlider.js']

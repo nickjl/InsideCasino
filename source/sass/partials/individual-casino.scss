@@ -83,7 +83,8 @@ $color-template-2: yellow;
 
     &--box {
       width: 75%;
-      border: 3px solid lighten($color-template-2, 20%);; //TODO
+      border: 3px solid #FFED00; //TODO
+      border: 3px solid #FFED0080;
       border-radius: 10px;
       padding: 20px 10px;
 
@@ -106,6 +107,7 @@ $color-template-2: yellow;
       color: $color-template-1; //TODO
     }
   }
+  
 
   &__gallery {
     @if $help {
@@ -149,7 +151,9 @@ $color-template-2: yellow;
     }
   }
   h2 {
-    color: lighten($color-template-2, 40%);
+    //color: lighten($color-template-2, 40%);
+    color: #FFED00;
+    color: #FFED0080;
   }
 
   &__playNow {
@@ -206,7 +210,7 @@ $color-template-2: yellow;
 
   .card-header {
     background-color: transparent;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid $theme-color-1; //TODO
   }
 
@@ -274,8 +278,7 @@ $color-template-2: yellow;
 
   &__thumbnail {
     img {
-      width: 27%;
-      height: 27%;
+      height: auto;
       display: inline-flex;
       border: 1px solid #dddddd;
       border-radius: 15px;
@@ -287,6 +290,10 @@ $color-template-2: yellow;
 
 @media (min-width: 576px) {
 
+  .casino-pg__icons svg {
+    height: 65px;
+  }
+
   .casino-info {
 
     .casino-bonus {
@@ -294,12 +301,6 @@ $color-template-2: yellow;
       margin: auto;
     }
 
-    &__thumbnail {
-      img {
-        width: 18%;
-        height: 18%;
-      }
-    }
   }
 
 }
@@ -328,12 +329,6 @@ $color-template-2: yellow;
       width: 50%;
     }
 
-    &__thumbnail {
-      img {
-        width: 25%;
-        height: 25%;
-      }
-    }
 
   }
 
@@ -353,12 +348,6 @@ $color-template-2: yellow;
       max-width: 220px;
     }
 
-    &__thumbnail {
-      img {
-        width: 20%;
-        height: 20%;
-      }
-    }
   }
 
 }

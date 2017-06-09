@@ -29,9 +29,17 @@ $rate-color3: #FF2626;
   border-bottom: 1px solid $cardbottomBorder;
 
   .casino-c {
+    a {
+      color: $cardColor;
+    }
+
     &__playNow {
       background: $cardColor;
       color: white;
+    }
+
+    &__playNow:hover {
+      background: $cardColor;
     }
 
     &__casino-title {
@@ -155,7 +163,6 @@ section .top:first-child {
 
 
   }
-
 
 
   &--icons_visible {
