@@ -1,0 +1,115 @@
+extends includes/layout
+
+mixin software()
+    .col-12.col-sm-6.col-lg-3.casino-info__thumbnail.py-4
+        img(src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=', data-src="http://placekitten.com/g/150/150")
+        h2 Astro Pay
+        p.
+            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+            wagering requirements.
+        a(href='') read more
+
+block content
+
+    section.software.wrapper
+        .container-fluid.py-5
+            //-.row
+                .col-12.col-md-6.col-xl-8
+                    h2 Intro
+                    p.
+                        Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                        for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                        wagering requirements.
+                    p.
+                        Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                        for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                        wagering requirements.
+
+                .col-12.col-md-6.col-xl-4.offer-group
+                    h2 Best Offer
+                    .offer
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/300/300")
+                        button.btn.btn-secondary.casino-c__more(type='button') Read Review
+                        button.btn.btn-secondary.casino-c__playNow(type='button') Play Now
+                    p.
+                        New customer only, Min Dep £10, Max Bonus £500 + 50 Spins on Starburts,
+                        Slot only, 4 x conversion, 30 x Wagering + T&C's apply
+
+
+            .row
+                .col-12.col-lg-6
+                    h2 Intro
+                    p.
+                        Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                        for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                        wagering requirements.
+                    p.
+                        Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                        for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                        wagering requirements.
+
+                .col-12.col-lg-6.casino-info
+                    .d-flex.flex-column.flex-sm-row.justify-content-around.flex-wrap
+                        .casino-bonus
+                            .casino-bonus__top
+                                img.img-fluid(src="assets/images/card-images/betFair.png")
+                                .casino-bonus__top--code.p-2
+                                    span code: GUTSB1
+                            .casino-bonus__bottom.p-3
+                                h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                p Welcome Bonus
+                                a(href="") GET NOW
+                        .casino-bonus.hide-bonuses
+                            .casino-bonus__top
+                                img.img-fluid(src="assets/images/card-images/betFair.png")
+                                .casino-bonus__top--code.p-2
+                                    span code: GUTSB1
+                            .casino-bonus__bottom.p-3
+                                h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                p Welcome Bonus
+                                a(href="") GET NOW
+                        .casino-bonus.hide-bonuses
+                            .casino-bonus__top
+                                img.img-fluid(src="assets/images/card-images/betFair.png")
+                                .casino-bonus__top--code.p-2
+                                    span code: GUTSB1
+                            .casino-bonus__bottom.p-3
+                                h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
+                                p Welcome Bonus
+                                a(href="") GET NOW
+                        a.viewMoreBonuses.hidden-sm-up show more
+
+            .ruled-title
+                span Payment
+            .row
+                +software()
+                +software()
+                +software()
+                +software()
+                +software()
+                +software()
+                +software()
+                +software()
+                +software()
+
+
+            nav(aria-label='Page navigation')
+                ul.pagination.justify-content-end
+                    li.page-item.disabled
+                        a.page-link(href='#', tabindex='-1') &laquo; Previous Page
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') Next Page &raquo;
+
+
+
+append scripts
+    script(src='assets/js/tether.min.js')
+    script(src='assets/js/bootstrap.min.js')
+    script(src='assets/js/software.js')

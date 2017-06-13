@@ -23,13 +23,15 @@ html
     block vars
     body(id= bodyId)
         include casino-card/casino-card
+        include svg/svg
 
         block content
 
 
 
+
         block footer
-            //-include includes/footer
+            include footer/footer
 
 
 
@@ -38,4 +40,6 @@ html
             script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
             //-script(src='assets/js/jquery.bxslider.min.js')
             //-script(src='assets/js/bxSlider.js')
+            script(src='assets/js/jquery.bxslider.min.js')
+            script(src='assets/js/bxSliderHome.js')
 

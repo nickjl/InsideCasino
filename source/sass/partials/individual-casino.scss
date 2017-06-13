@@ -5,8 +5,8 @@ $rate-color1: #00A651;
 $rate-color2: #DFB300;
 $rate-color3: #FF2626;
 
-$color-template-1: green;
-$color-template-2: yellow;
+$color-template-1: lighten(black, 95%);
+$color-template-2: $theme-color-1;
 
 // rating mixin
 @mixin rating($rate-color) {
@@ -83,8 +83,9 @@ $color-template-2: yellow;
 
     &--box {
       width: 75%;
-      border: 3px solid #FFED00; //TODO
-      border: 3px solid #FFED0080;
+      border: 3px solid lighten(orange, 20%);
+      //border: 3px solid #FFED00;
+      //border: 3px solid #FFED0080;
       border-radius: 10px;
       padding: 20px 10px;
 
@@ -107,7 +108,7 @@ $color-template-2: yellow;
       color: $color-template-1; //TODO
     }
   }
-  
+
 
   &__gallery {
     @if $help {
@@ -151,9 +152,9 @@ $color-template-2: yellow;
     }
   }
   h2 {
-    //color: lighten($color-template-2, 40%);
-    color: #FFED00;
-    color: #FFED0080;
+    color: lighten(orange, 20%);
+    //color: #FFED00;
+    //color: #FFED0080;
   }
 
   &__playNow {
@@ -246,11 +247,12 @@ $color-template-2: yellow;
         font-size: 0.8rem;
         font-family: $body-font;
         font-weight: 600;
-        color: lighten($color-template-2, 10%) //TODO
+        color: $color-template-2 //TODO
       }
     }
 
     &__bottom {
+      background: rgba(0,0,0,0.1);
       a{
         font-family: $header-font;
       }
@@ -258,12 +260,12 @@ $color-template-2: yellow;
       h2 {
         font-family: $body-font;
         text-align: left;
-        color: $color-template-2; //TODO
+        color: black; //TODO
         font-size: 1.1rem;
       }
 
       p {
-        color: lighten($color-template-2, 30%);
+        color: lighten(black,40%);
       }
     }
   }
@@ -345,7 +347,7 @@ $color-template-2: yellow;
     }
 
     .casino-bonus {
-      max-width: 220px;
+      max-width: 250px;
     }
 
   }

@@ -2,6 +2,9 @@ $offer-color: $theme-color-1;
 
 .offer img {
   width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
 }
 
 .offer {
@@ -113,6 +116,7 @@ hr {
 
 .about-us h2, .container-colored h2 {
   height: 4rem;
+  font-family: $header-font-special;
 }
 
 .offer .btn {

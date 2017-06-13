@@ -31,7 +31,7 @@
 @import "scss/navbar";
 @import "scss/card";
 //@import "scss/breadcrumb";
-//@import "scss/pagination";
+@import "scss/pagination";
 //@import "scss/badge";
 //@import "scss/jumbotron";
 //@import "scss/alert";
@@ -50,6 +50,9 @@
 // Utility classes
 @import "scss/utilities";
 
+@import url(https://fonts.googleapis.com/css?family=Poller+One);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 
 
 $bg_colour:             #f4f4f4;
@@ -57,7 +60,8 @@ $box_colour:            #fff;
 $border_style:          1px solid;
 $border_radius:         4px;
 $header-font: 'Poller One';
-$body-font: sans-serif;
+$body-font: Sans-Serif;
+$header-font-special: 'Montserrat';
 
 html {
   background:         $bg_colour;
@@ -115,6 +119,10 @@ h4, p, a {
 @import "partials/homepage";
 @import "partials/individual-casino";
 @import "partials/individual-game";
+@import "partials/flexgrid";
+@import "partials/footer";
+@import "partials/software";
+
 
 
 

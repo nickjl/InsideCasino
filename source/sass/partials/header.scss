@@ -8,7 +8,7 @@
 }
 
 .first-image h2, .third-image h2 {
-  bottom: 30%;
+  bottom: 35%;
 }
 
 .first-image p, .third-image p {
@@ -16,7 +16,7 @@
 }
 
 .second-image {
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .bx-wrapper {
@@ -30,6 +30,7 @@
 
 .header-slider p {
   font-size: 0.8rem;
+  color: #B7B7B7;
 }
 
 .header-slider h2 {
@@ -49,7 +50,8 @@
   // SVG fallback for IE 9 (could be data URI, or could use filter)
   //background-image: url(fallback-gradient.svg);
   //background gradient
-  background: linear-gradient(rgb(247, 143, 0) 0%, rgb(196, 57, 17) 25%, rgb(117, 0, 60) 50%, rgb(55, 21, 74) 75%, rgb(15, 36, 89) 100%);
+  background: url('../assets/images/logo.png') center no-repeat, linear-gradient(rgb(247, 143, 0) 0%, rgb(196, 57, 17) 25%, rgb(117, 0, 60) 50%, rgb(55, 21, 74) 75%, rgb(15, 36, 89) 100%);
+  background-size: cover, auto;
   display: flex;
 }
 
@@ -73,7 +75,7 @@
   }
 
   .second-image h2 {
-    bottom: 30%;
+    bottom: 35%;
   }
 
   .second-image p {
@@ -81,7 +83,7 @@
   }
 
   .second-image {
-    height: 100vw;
+    height: 96vw;
     max-height: 400px;
   }
 
@@ -100,7 +102,7 @@
     width: 60px;
     height: 60px;
     bottom: 0;
-    right: 0;
+    right: 5px;
   }
 
   .header-slider {
@@ -163,7 +165,7 @@
   }
 
   .second-image h2 {
-    bottom: 30%;
+    bottom: 35%;
   }
 
   .second-image p {
@@ -201,6 +203,10 @@
 
   .header-slider p {
     font-size: 0.9rem;
+  }
+
+  .header-slider div.arrow {
+    right: 0;
   }
 }
 
