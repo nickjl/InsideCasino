@@ -23,6 +23,8 @@ block content
                 .card-block
                     p= content
 
+    include  includes/bonus-card/bonus-card
+
     include includes/svg/svg
 
 
@@ -67,12 +69,6 @@ block content
                                 use(xlink:href="#i_paypal" x="0" y="0")
                             p.p-1.p-md-2 Paypal
                     .d-flex.flex-column.px-4.casino-pg__details
-                        h1 Betfair Casino
-                        p.
-                            Spinsvilla Casino is an online casino that's powered by Cozygames Management Ltd. Casinos, and is one that appeared online in the summer of 2016.
-                            Cozygames are based in the Isle of Man and have licences issued by the Commission for YK-based players. Cozygames operate a number of other top-notch online
-                            casinos, including Windfall Casino, Swanky Bingo Casino and Royalio Casino.
-                    //.casino-pg__details.d-flex.flex-column.px-4
                         h1 Betfair Casino
                         p.
                             Spinsvilla Casino is an online casino that's powered by Cozygames Management Ltd. Casinos, and is one that appeared online in the summer of 2016.
@@ -223,42 +219,11 @@ block content
                 .ruled-title
                     span BONUSES
                 .d-flex.flex-column.flex-sm-row.justify-content-around.flex-wrap
-                    .casino-bonus.m-2
-                        .casino-bonus__top
-                            img(src="assets/images/card-images/betFair.png")
-                            .casino-bonus__top--code.p-2
-                                span code: GUTSB1
-                        .casino-bonus__bottom.p-3
-                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
-                            p Welcome Bonus
-                            a(href="") GET NOW
-                    .casino-bonus.m-2
-                        .casino-bonus__top
-                            img(src="assets/images/card-images/betFair.png")
-                            .casino-bonus__top--code.p-2
-                                span code: GUTSB1
-                        .casino-bonus__bottom.p-3
-                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
-                            p Welcome Bonus
-                            a(href="") GET NOW
-                    .casino-bonus.m-2
-                        .casino-bonus__top
-                            img(src="assets/images/card-images/betFair.png")
-                            .casino-bonus__top--code.p-2
-                                span code: GUTSB1
-                        .casino-bonus__bottom.p-3
-                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
-                            p Welcome Bonus
-                            a(href="") GET NOW
-                    .casino-bonus.m-2
-                        .casino-bonus__top
-                            img(src="assets/images/card-images/betFair.png")
-                            .casino-bonus__top--code.p-2
-                                span code: GUTSB1
-                        .casino-bonus__bottom.p-3
-                            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
-                            p Welcome Bonus
-                            a(href="") GET NOW
+                    +bonusCard('')
+                    +bonusCard('hide-bonuses')
+                    +bonusCard('hide-bonuses')
+                    +bonusCard('hide-bonuses')
+                    a.viewMoreBonuses.hidden-sm-up show more
 
 
 append scripts

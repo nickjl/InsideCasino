@@ -1,0 +1,94 @@
+extends includes/layout
+
+
+
+block content
+    // pop up icon mixin
+    mixin dropcard(collapseNumber, title, content)
+        .card
+            .card-header(role='tab', id= 'heading' + collapseNumber)
+                h5.mb-0
+                    a.collapsed(data-toggle='collapse', data-parent='#accordion', href= '#collapse' + collapseNumber, aria-expanded='true', aria-controls= 'collapse' + collapseNumber)
+                        = title
+                        i.float-right ^
+            .collapse(id= 'collapse' + collapseNumber, role='tabpanel', aria-labelledby= 'heading' + collapseNumber)
+                .card-block
+                    p= content
+
+    section.wrapper.software-review
+        .container-fluid.py-5
+            .row
+                .col-12.col-md-6.col-lg-8
+                    p.lead "We're treating all our UK members to something rather special"
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+
+                .col-12.col-md-6.col-lg-4
+                    .ruled-title.mt-0
+                        span Related Categories
+                    #accordion(role='tablist', aria-multiselectable='true')
+                        +dropcard('One', 'Launched Date', 'content')
+                        +dropcard('Two', 'Deposit Method', 'content')
+                        +dropcard('Three', 'Currencies allowed', 'content')
+                        +dropcard('Four', 'Withdrawal Limit', 'content')
+                        +dropcard('Five', 'Withdrawal Method', 'content')
+                        +dropcard('Six', 'Licenses', 'content')
+
+                .col-12
+                    h2.casino-c__orange--group High roller casino
+                        a.float-right.hidden-xs-down(href='')
+                            span.casino-c__orange--group view all
+                    +casino-c("rate-color1", "casino-c__orange", imgLogo01 , "Simba Games", offert01, "casino-c--icons_visible")
+                    +casino-c("rate-color2", "casino-c__orange", imgLogo02 , "Rizk", offert03, "casino-c--icons_visible")
+                    +casino-c("rate-color1", "casino-c__orange", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c--icons_visible")
+                    +casino-c("rate-color2", "casino-c__orange", imgLogo04 , "Dunder", offert04, "casino-c--icons_visible")
+                    +casino-c("rate-color3", "casino-c__orange", imgLogo05 , "Casumo", offert05, "casino-c--icons_visible")
+
+            nav(aria-label='Page navigation')
+                ul.pagination.justify-content-end.my-3
+                    li.page-item.disabled
+                        a.page-link(href='#', tabindex='-1') &laquo; Previous
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') Next &raquo;
+
+
+            .row
+                .col-12.col-md-6.col-lg-8
+                    p.lead "We're treating all our UK members to something rather special"
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+                        p.
+                            Let us scour the T's and C's, the FAQs and al the other acronym based information with a magnifying glass (it's called small print
+                            for a reason). You can sign up to a casino armed with the facts, bonus time frames, withdrawal limits and, of course, those sometimes sneaky
+                            wagering requirements.
+
+
+                .col-12.col-md-6.col-lg-4.offer-group
+                    h2.mt-0 Best Offer
+                    .offer
+                        img(src='./assets/images/card-images/simbaGames.png', data-src="http://placekitten.com/g/300/300")
+                        button.btn.btn-secondary.casino-c__more(type='button') Read Review
+                        button.btn.btn-secondary.casino-c__playNow(type='button') Play Now
+                    p.
+                        New customer only, Min Dep £10, Max Bonus £500 + 50 Spins on Starburts,
+                        Slot only, 4 x conversion, 30 x Wagering + T&C's apply
+
+
+
+append scripts
+    script(src='assets/js/tether.min.js')
+    script(src='assets/js/bootstrap.min.js')

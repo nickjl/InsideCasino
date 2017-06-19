@@ -1,0 +1,98 @@
+.casino-bonus {
+  background: lighten($color-template-1, 40%);
+  width: 250px;
+  margin: 1.5% auto;
+
+  &__top {
+    background-color: $color-template-1;
+    position: relative;
+
+    img {
+      max-height: 150px;
+      display: block;
+      margin: auto;
+    }
+
+    &--code {
+      width: 75%;
+      text-align: center;
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      position: absolute;
+      bottom: -20px;
+      left: 12.5%;
+      font-size: 0.8rem;
+      font-family: $body-font;
+      font-weight: 600;
+      color: $color-template-2
+    }
+  }
+
+  &__bottom {
+    background: rgba(0, 0, 0, 0.1);
+    a {
+      font-family: $header-font;
+    }
+
+    h2 {
+      font-family: $body-font;
+      text-align: left;
+      color: black;
+      font-size: 1.1rem;
+    }
+
+    p {
+      color: lighten(black, 40%);
+    }
+  }
+}
+
+
+.hide-bonuses {
+  display: none;
+}
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):hover {
+  color: $theme-color-1;
+}
+
+.viewMoreBonuses {
+  text-align: center;
+}
+
+
+@media (min-width: 576px) {
+
+  .casino-bonus {
+    width: 47%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .col-lg-6 {
+    .casino-bonus {
+      width: 30%;
+    }
+  }
+
+
+
+  .hide-bonuses {
+    display: block;
+  }
+
+
+}
+
+
+@media (min-width: 992px) {
+
+  .casino-bonus {
+    width: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+  }
+
+}

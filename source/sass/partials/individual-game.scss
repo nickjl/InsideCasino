@@ -35,8 +35,10 @@ $game-color: blue;
 }
 
 .game-summary {
-  background-color: lighten($game-color, 40%);
+  background: url('../assets/images/games/starburst_bg.jpg') no-repeat;
+  background-size: cover;
   color: lighten($game-color, 20%);
+  padding-top: 3rem;
 
   &__icons {
     &--box {
@@ -49,13 +51,20 @@ $game-color: blue;
       }
     }
 
+  }
 
+  .icon-disabled {
+    opacity: 0.5;
   }
 
   &__attributes {
 
-    h2, span {
+    h2 {
       color: #ffffff;
+    }
+
+    span {
+      color: grey;
     }
 
     &--list {
@@ -128,6 +137,7 @@ $game-color: blue;
 
     }
 
+
   }
 
 }
@@ -136,7 +146,7 @@ $game-color: blue;
   .game-summary {
 
     &__demo {
-      margin-bottom: -15%;
+      margin-bottom: -7%;
     }
 
     &__width {

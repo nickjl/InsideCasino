@@ -1,0 +1,89 @@
+.news-header {
+  background: url('../assets/images/games/starburst_bg.jpg') no-repeat;
+  background-size: cover;
+  min-height: 350px;
+
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+.news-content {
+  .casino-pg__playNow {
+    margin-top: 0;
+    width: 85%;
+  }
+
+
+
+  dt {
+    text-align: right;
+  }
+
+  dl {
+    font-family: $body-font;
+    color: $font-color;
+    font-weight: lighter;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  .c1, .c2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .c2 {
+    h2 {
+      color: $font-color;
+      font-family: $body-font;
+    }
+  }
+
+  .lead {
+    width: 75%;
+  }
+
+  ol {
+    list-style: none;
+    margin: 2rem 1rem;
+    padding-left: 0;
+  }
+
+  li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    font-family: $body-font;
+    font-size: 0.9rem;
+  }
+
+  li:before {
+    margin-right: 10px;
+    content: counter(item);
+    background: $theme-color-2;
+    border-radius: 100%;
+    color: white;
+    width: 1.4em;
+    text-align: center;
+    display: inline-block;
+    font-family: $header-font;
+  }
+}
+
+.lead {
+  font-weight: bold;
+}
+
+
+@include media-breakpoint-up(md) {
+  .news-header {
+
+    h1 {
+      width: 60%;
+    }
+  }
+}

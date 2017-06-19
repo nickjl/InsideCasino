@@ -15,10 +15,10 @@ $color-template-2: $theme-color-1;
     &__rating {
 
       &--dot {
-        background-color: $rate-color; //TODO
+        background-color: $rate-color;
       }
       &--value {
-        color: $rate-color; //TODO
+        color: $rate-color;
       }
     }
 
@@ -41,8 +41,8 @@ $color-template-2: $theme-color-1;
 }
 
 .casino-pg {
-  background-color: $color-template-1; //TODO
-  border-bottom: 15px solid $color-template-2; //TODO
+  background-color: $color-template-1;
+  border-bottom: 15px solid $color-template-2;
 
   &__title {
     @if $help {
@@ -101,11 +101,11 @@ $color-template-2: $theme-color-1;
 
     &--playNow {
       width: 45%;
-      background: $color-template-2; //TODO
+      background: $color-template-2;
       margin: 10px auto;
       text-align: center;
       padding: 10px;
-      color: $color-template-1; //TODO
+      color: $color-template-1;
     }
   }
 
@@ -168,6 +168,10 @@ $color-template-2: $theme-color-1;
     font-size: 1.2rem;
   }
 
+  &__playNow:hover {
+    color: white;
+  }
+
 
   .bx-wrapper {
     margin: auto;
@@ -181,12 +185,12 @@ $color-template-2: $theme-color-1;
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a {
-    background: $color-template-1; //TODO
-    border: 3px solid $color-template-2; //TODO
+    background: $color-template-1;
+    border: 3px solid $color-template-2;
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: $color-template-2; //TODO
+    background: $color-template-2;
   }
 
   .bx-wrapper {
@@ -198,22 +202,22 @@ $color-template-2: $theme-color-1;
 
 }
 
+.card {
+  border: none;
+}
 
+.card-header {
+  background-color: transparent;
+  text-align: left;
+  border-bottom: 1px solid $theme-color-1;
+}
 
 
 
 .casino-info {
   padding-top: 3rem;
 
-  .card {
-    border: none;
-  }
 
-  .card-header {
-    background-color: transparent;
-    text-align: left;
-    border-bottom: 1px solid $theme-color-1; //TODO
-  }
 
   h2 {
     text-align: left;
@@ -222,53 +226,6 @@ $color-template-2: $theme-color-1;
     margin-bottom: 1rem; ;
   }
 
-
-  .casino-bonus {
-    background: lighten($color-template-1, 40%);
-
-    &__top {
-      background-color: $color-template-1; //TODO
-      position: relative;
-
-      img {
-        max-height: 150px;
-        display: block;
-        margin: auto;
-      }
-
-      &--code {
-        width:75%;
-        text-align: center;
-        background-color: #FFFFFF;
-        border-radius: 20px;
-        position: absolute;
-        bottom: -20px;
-        left: 12.5%;
-        font-size: 0.8rem;
-        font-family: $body-font;
-        font-weight: 600;
-        color: $color-template-2 //TODO
-      }
-    }
-
-    &__bottom {
-      background: rgba(0,0,0,0.1);
-      a{
-        font-family: $header-font;
-      }
-
-      h2 {
-        font-family: $body-font;
-        text-align: left;
-        color: black; //TODO
-        font-size: 1.1rem;
-      }
-
-      p {
-        color: lighten(black,40%);
-      }
-    }
-  }
 
   &__pros {
     list-style-image: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png');
@@ -296,14 +253,7 @@ $color-template-2: $theme-color-1;
     height: 65px;
   }
 
-  .casino-info {
 
-    .casino-bonus {
-      width: 47%;
-      margin: auto;
-    }
-
-  }
 
 }
 
@@ -325,8 +275,6 @@ $color-template-2: $theme-color-1;
 
   .casino-info {
 
-
-
     &__width {
       width: 50%;
     }
@@ -337,19 +285,3 @@ $color-template-2: $theme-color-1;
 
 }
 
-@media (min-width: 992px) {
-
-  .casino-info {
-
-    .casino-bonus {
-      width: 22%;
-      margin: auto;
-    }
-
-    .casino-bonus {
-      max-width: 250px;
-    }
-
-  }
-
-}

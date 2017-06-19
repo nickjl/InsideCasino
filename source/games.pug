@@ -6,7 +6,7 @@ append css
 
 
 block vars
-    - bodyId = "starburst";
+    //- bodyId = "starburst";
 
 block content
 
@@ -20,7 +20,7 @@ block content
         section.game-info
             .d-flex.flex-column.flex-sm-row
                 .game-info__img.d-flex.justify-content-center.px-2.my-sm-4
-                    img(src="assets/images/card-images/betFair.png")
+                    img(src="assets/images/games-assets/game00.png")
 
                 .game-info__title.d-flex.flex-column.px-4.py-sm-4.justify-content-around.align-items-center
                     h1 STARBURST
@@ -34,7 +34,7 @@ block content
         section.game-summary
             .d-flex.flex-column.flex-lg-row.justify-content-around
                 .d-flex.justify-content-center.align-items-center.game-summary__width.px-md-4
-                    img.img-fluid.game-summary__demo(src="http://placekitten.com/g/650/400")
+                    img.img-fluid.game-summary__demo(src="assets/images/games/starburst_play.jpg")
 
                 .game-summary__attributes.d-flex.flex-column.justify-content-center.game-summary__width.py-4
                     .flex-row.d-flex.justify-content-around.px-2.flex-wrap
@@ -46,7 +46,7 @@ block content
                             svg.vip(viewBox="0 0 110 110")
                                 use(xlink:href="#i_vip" x="0" y="0")
                             p.p-1.p-md-2 5 Reels
-                        .game-summary__icons--box
+                        .game-summary__icons--box.icon-disabled
                             svg.live(viewBox="0 0 110 110")
                                 use(xlink:href="#i_live" x="0" y="0")
                             p.p-1.p-md-2 Free Spins
@@ -112,14 +112,14 @@ block content
                         a.casino-pg__playNow(href="") Play now
 
                     .casino-info__width.p-2.game-details__play
-                        h2.casino-c__blue--group Play Starburst
+                        h2.casino-c__orange--group Play Starburst
                             a.float-right(href='')
-                                span.casino-c__blue--group view all
-                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "Video Slot", "the offer details", "")
-                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "PaddyPower Casino", "the offer details", "")
-                        +casino-c("rate-color1", "casino-c__blue", "assets/images/card-images/betFair.png" , "BetWay Casino", "the offer details", "")
-                        +casino-c("rate-color2", "casino-c__blue", "assets/images/card-images/betFair.png" , "BetFair Casino", "the offer details", "")
-                        +casino-c("rate-color3", "casino-c__blue", "assets/images/card-images/betFair.png" , "888 Casino", "the offer details", "")
+                                span.casino-c__orange--group view all
+                        +casino-c("rate-color1", "casino-c__orange", "assets/images/card-images/betFair.png" , "Video Slot", "the offer details", "")
+                        +casino-c("rate-color1", "casino-c__orange", "assets/images/card-images/betFair.png" , "PaddyPower Casino", "the offer details", "")
+                        +casino-c("rate-color1", "casino-c__orange", "assets/images/card-images/betFair.png" , "BetWay Casino", "the offer details", "")
+                        +casino-c("rate-color2", "casino-c__orange", "assets/images/card-images/betFair.png" , "BetFair Casino", "the offer details", "")
+                        +casino-c("rate-color3", "casino-c__orange", "assets/images/card-images/betFair.png" , "888 Casino", "the offer details", "")
 
 
 

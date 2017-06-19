@@ -1,5 +1,4 @@
 .software {
-  //padding: 5rem 0;
 
   h2 {
     text-align: left;
@@ -8,81 +7,60 @@
     font-weight: 700;
   }
 
-  .page-link {
-    border: none;
-    color: $theme-color-1;
-    margin-left: 0;
-  }
 
-  .page-link:hover {
-    background: $theme-color-1;
-    color: #ffffff;
-    border-bottom: 2px solid $theme-color-1;
-
-  }
-
-  .page-item.active .page-link {
-    background: #ffffff;
-    color: $grey;
-    box-sizing: border-box;
-    border-bottom: 2px solid $grey;
-
-  }
-
-  .page-item.disabled .page-link {
-    color: $grey;
-  }
 
   .casino-bonus h2 {
     height: auto;
   }
 
-}
-
-
-
-.software {
   .casino-info {
     padding-top: 0;
+  }
 
-    .casino-bonus {
 
-      width: 250px;
-      margin: 1.5% auto;
-    }
+}
+
+.img-center {
+  margin: auto;
+  display: block;
+}
+
+
+.software-review {
+  h2 {
+    text-align: left;
+  }
+
+  .game-details__headings h2 {
+    font-family: $body-font;
   }
 
 }
 
-a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):hover {
+.page-link {
+  border: none;
   color: $theme-color-1;
+  margin-left: 0;
 }
 
-.viewMoreBonuses {
-  text-align: center;
+.page-link:hover {
+  background: $theme-color-1;
+  color: #ffffff;
+  border-bottom: 2px solid $theme-color-1;
+}
+
+.page-item.active .page-link {
+  background: #ffffff;
+  color: $grey;
+  box-sizing: border-box;
+  border-bottom: 2px solid $grey;
+}
+
+.page-item.disabled .page-link {
+  color: $grey;
 }
 
 
-@media (min-width: 576px) {
-  .software {
-    .casino-info {
 
-      .casino-bonus {
-        width: 30%;
-        margin: 1.5%;
-      }
-    }
-    .hide-bonuses {
-      display: block;
-    }
-  }
-}
 
-@media (max-width: 575px) {
-  .software {
-    .hide-bonuses {
-      display: none;
-    }
-  }
-}
 
