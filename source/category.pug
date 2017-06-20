@@ -3,17 +3,6 @@ extends includes/layout
 
 
 block content
-    // pop up icon mixin
-    mixin dropcard(collapseNumber, title, content)
-        .card
-            .card-header(role='tab', id= 'heading' + collapseNumber)
-                h5.mb-0
-                    a.collapsed(data-toggle='collapse', data-parent='#accordion', href= '#collapse' + collapseNumber, aria-expanded='true', aria-controls= 'collapse' + collapseNumber)
-                        = title
-                        i.float-right ^
-            .collapse(id= 'collapse' + collapseNumber, role='tabpanel', aria-labelledby= 'heading' + collapseNumber)
-                .card-block
-                    p= content
 
     section.wrapper.software-review
         .container-fluid.py-5
@@ -32,18 +21,24 @@ block content
                 .col-12.col-md-6.col-lg-4
                     .ruled-title.mt-0
                         span Related Categories
-                    #accordion(role='tablist', aria-multiselectable='true')
-                        +dropcard('One', 'Launched Date', 'content')
-                        +dropcard('Two', 'Deposit Method', 'content')
-                        +dropcard('Three', 'Currencies allowed', 'content')
-                        +dropcard('Four', 'Withdrawal Limit', 'content')
-                        +dropcard('Five', 'Withdrawal Method', 'content')
-                        +dropcard('Six', 'Licenses', 'content')
+                    .related-category
+                        a(href="")
+                            h5 Match Deposit Bonus
+                    .related-category
+                        a(href="")
+                            h5 High roller casino
+                    .related-category
+                        a(href="")
+                            h5 Free Spins
+                    .related-category
+                        a(href="")
+                            h5 No deposit bonus
+                    .related-category
+                        a(href="")
+                            h5 Free games
 
                 .col-12
                     h2.casino-c__orange--group High roller casino
-                        a.float-right.hidden-xs-down(href='')
-                            span.casino-c__orange--group view all
                     +casino-c("rate-color1", "casino-c__orange", imgLogo01 , "Simba Games", offert01, "casino-c--icons_visible")
                     +casino-c("rate-color2", "casino-c__orange", imgLogo02 , "Rizk", offert03, "casino-c--icons_visible")
                     +casino-c("rate-color1", "casino-c__orange", imgLogo03 , "Grosvendor Casinos", offert03, "casino-c--icons_visible")

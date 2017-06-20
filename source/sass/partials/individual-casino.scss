@@ -212,6 +212,16 @@ $color-template-2: $theme-color-1;
   border-bottom: 1px solid $theme-color-1;
 }
 
+.related-category {
+  padding: 10px 15px;
+  border-bottom: 1px solid $theme-color-1;
+  h5 {
+    font-family: $body-font;
+    color: $theme-color-1;
+    margin-bottom: 0;
+  }
+}
+
 
 
 .casino-info {

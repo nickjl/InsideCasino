@@ -29,9 +29,11 @@ mixin casino-c(rateColor, cardColor, logo, name, offer, icons)
    .casino-c.d-flex.align-items-stretch.justify-content-start.flex-column.flex-sm-row(class= rateColor + " " + cardColor + " " + icons)
        .casino-c__first.d-flex
            .casino-c__logo.align-self-center
-               img(src= logo)
+               a(href="")
+                img(src= logo)
            .casino-c__casinoInfo.align-self-center
-               h4.casino-c__casino-title= name
+               a(href="")
+                h4.casino-c__casino-title= name
                p.casino-c__casino-offer= offer
        .casino-c__second.d-flex.ml-auto.flex-column.flex-sm-row
            .casino-c__icons.align-self-center
