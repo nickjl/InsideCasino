@@ -2,21 +2,12 @@
   position: relative;
 }
 
-.first-image h2, .third-image h2, .first-image p, .third-image p {
-  position: absolute;
-  left: 10px;
-}
-
-.first-image h2, .third-image h2 {
-  bottom: 35%;
-}
-
-.first-image p, .third-image p {
-  bottom: 0;
-}
-
 .second-image {
-  background-color: rgba(0,0,0,0.3);
+
+  &__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .bx-wrapper {
@@ -44,6 +35,20 @@
   color: inherit;
 }
 
+.shadow {
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(transparent,rgb(15, 36, 89));
+  }
+}
+
+
 .slider-wrapper-bg {
   // Fallback (could use .jpg/.png alternatively)
   background-color: rgb(15, 36, 89);
@@ -68,23 +73,20 @@
   fill: #FFFFFF;
 }
 
+
+
+
 @media (max-width: 767px) {
-  .second-image h2, .second-image p {
-    position: absolute;
-    left: 10px;
+
+  .first-image, .second-image, .third-image {
+    vertical-align: bottom;
+    display: inline-block;
+    float: none !important;
   }
 
-  .second-image h2 {
-    bottom: 35%;
-  }
-
-  .second-image p {
-    bottom: 0;
-  }
-
-  .second-image {
-    height: 96vw;
-    max-height: 400px;
+  .second-image img {
+    max-width: 50%;
+    height: 100%;
   }
 
 }
@@ -95,20 +97,24 @@
     max-width: 1200px;
   }
 
-  .header-slider div.arrow {
+  .header-slider .arrow {
     display: block;
     position: absolute;
     background-color: orange;
     width: 60px;
     height: 60px;
+    padding: 10px;
     bottom: 0;
-    right: 5px;
+    right: 0;
+  }
+
+  .header-slider .arrow svg {
+    height: 40px;
   }
 
   .header-slider {
     padding: 0;
     margin: 0;
-    list-style-type: none;
     white-space: nowrap;
   }
 
@@ -132,57 +138,41 @@
     font-size: 0.8rem;
   }
 
-  .header-slider div {
+  .header-slider .first-image, .header-slider .second-image, .header-slider .third-image {
     display: inline-block;
     width: 50%;
     white-space: normal;
     margin-right: -5px;
   }
-  .header-slider div.second-image {
+
+  .header-slider .second-image {
     position: relative;
-    padding-top: 50%;
     vertical-align: bottom;
   }
 
   .header-slider div img {
     max-width: 100%;
   }
-  .header-slider div.third-image {
+  .header-slider .third-image {
     width: calc(100%/3);
   }
 
-  .header-slider div.arrow-top {
+  .header-slider .arrow-top {
     top: 0;
     background-color: red;
   }
-  .second-image {
-    position: relative;
-  }
 
-  .second-image h2, .second-image p {
-    position: absolute;
-    left: 10px;
-  }
-
-  .second-image h2 {
-    bottom: 35%;
-  }
-
-  .second-image p {
-    bottom: 0;
-  }
 }
 
 @media screen and (min-width: 992px){
-  .header-slider div {
+  .header-slider .first-image, .header-slider .second-image, .header-slider .third-image {
     float: left;
     margin-right: 0;
   }
-  .header-slider div.second-image {
+  .header-slider .second-image {
     width: 50%;
-    padding-top: 25%;
   }
-  .header-slider div.third-image {
+  .header-slider .third-image {
     width: 25%;
     height: 50%;
   }
@@ -195,8 +185,6 @@
     width: 85%;
   }
 
-
-
   .header-slider .second-image h2 {
     font-size: 1.8rem;
   }
@@ -205,8 +193,13 @@
     font-size: 0.9rem;
   }
 
-  .header-slider div.arrow {
-    right: 0;
-  }
+}
+
+.slider-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
