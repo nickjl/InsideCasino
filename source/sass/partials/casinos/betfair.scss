@@ -24,6 +24,10 @@ $casino-color-2: black;
       background: $casino-color-2;
       color: $casino-color-1;
     }
+
+    &--playNow:hover {
+      color: $casino-color-1;
+    }
   }
 
   &__icons {

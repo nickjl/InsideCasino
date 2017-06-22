@@ -55,7 +55,7 @@
   // SVG fallback for IE 9 (could be data URI, or could use filter)
   //background-image: url(fallback-gradient.svg);
   //background gradient
-  background: url('../assets/images/logo.png') center no-repeat, linear-gradient(rgb(247, 143, 0) 0%, rgb(196, 57, 17) 25%, rgb(117, 0, 60) 50%, rgb(55, 21, 74) 75%, rgb(15, 36, 89) 100%);
+  background: url('../images/logo.png') center no-repeat, linear-gradient(rgb(247, 143, 0) 0%, rgb(196, 57, 17) 25%, rgb(117, 0, 60) 50%, rgb(55, 21, 74) 75%, rgb(15, 36, 89) 100%);
   background-size: cover, auto;
   display: flex;
 }

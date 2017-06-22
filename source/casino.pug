@@ -5,8 +5,6 @@ extends includes/layout
         include ../app/css/casinos/betfair.css
 
 
-//-block vars
-    - bodyId = "betfair";
 
 block content
     // pop up icon mixin
@@ -216,7 +214,7 @@ block content
 
                 .ruled-title
                     span BONUSES
-                .d-flex.flex-column.flex-sm-row.justify-content-around.flex-wrap
+                .d-flex.flex-column.flex-sm-row.justify-content-center.flex-wrap
                     +bonusCard('')
                     +bonusCard('hide-bonuses')
                     +bonusCard('hide-bonuses')

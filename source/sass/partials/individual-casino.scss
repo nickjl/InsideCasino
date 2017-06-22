@@ -107,6 +107,10 @@ $color-template-2: $theme-color-1;
       padding: 10px;
       color: $color-template-1;
     }
+
+    &--playNow:hover {
+      color: $color-template-1;
+    }
   }
 
 
