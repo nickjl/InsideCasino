@@ -36,6 +36,7 @@ module.exports = function (grunt) {
                     //'app/css/ampcasino.css':			'source/sass/casinoampstyles.scss',
                     //'app/css/ampgame.css':			'source/sass/gameampstyles.scss',
                     'app/css/casinos/betfair.css':	'source/sass/partials/casinos/betfair.scss',
+                    'app/css/games/games.css':	'source/sass/partials/games/games.scss',
                     //'app/casino02/css/app.css':	'source/casino02/sass/styles.sass'
 
                 },

@@ -26,9 +26,10 @@ $game-color: blue;
     a {
       background: $game-color; //TODO
       margin: 30px auto;
-      padding: 10px 25px;
+      padding: 15px 30px;
       color: #ffffff; //TODO
       font-family: $header-font, $body-font;
+      font-size: 1.3rem;
     }
   }
 

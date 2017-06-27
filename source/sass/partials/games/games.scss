@@ -1,0 +1,53 @@
+$game-color: red;
+
+.game-info {
+  border-bottom: 15px solid lighten($game-color, 10%);
+
+
+  &__title {
+    h1 {
+      color: $game-color;
+    }
+    a {
+      color: $game-color;
+    }
+
+  }
+
+  &__play {
+    a {
+      background: $game-color; //TODO
+    }
+  }
+
+}
+
+.game-summary {
+  color: lighten($game-color, 20%);
+
+  &__icons {
+    &--box {
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+  }
+
+
+
+  &__attributes {
+
+    &--list {
+      ul {
+
+        li {
+          border-bottom: 1px solid $game-color;
+        }
+      }
+    }
+
+  }
+
+}
