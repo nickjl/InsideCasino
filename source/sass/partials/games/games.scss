@@ -1,37 +1,65 @@
-$game-color: red;
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+  @if $b-hsb == 0 {
+    @return hsla(0, 0, 0, $a);
+  }
+  @else {
+    $l-hsl: $b-hsb / 2 * (2 - $s-hsb / 100);
+    $s-hsl: $b-hsb * $s-hsb / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+  }
+}
+
+// must be: 0< h <360; s >= 80; b<= 50
+$h: 269;
+$s: 80;
+$b: 39;
+
+$btnBg: hsb($h, $s, $b, 1);
+$borderTop: hsb($h, 80, 60, 1);
+$defaultBg: hsb($h, $s, 30, 1);
+$listBorder: hsb($h, 80, 80, 0.5);
+$tintText: hsb($h, 50, 100, 1);
+$icons: hsb($h, 80, 100, 1);
+$iconsDisable: hsb($h, 5, 40, 0.5);
 
 .game-info {
-  border-bottom: 15px solid lighten($game-color, 10%);
+  border-bottom: 15px solid $borderTop;
 
 
   &__title {
     h1 {
-      color: $game-color;
+      color: $btnBg;
     }
     a {
-      color: $game-color;
+      color: $btnBg;
     }
 
   }
 
   &__play {
     a {
-      background: $game-color; //TODO
+      background: $btnBg;
     }
   }
 
 }
 
 .game-summary {
-  color: lighten($game-color, 20%);
+  background-color: $defaultBg;
+  color: $tintText;
 
   &__icons {
     &--box {
 
       svg {
-        fill: currentColor;
+        fill: $tintText;
       }
     }
+
+  }
+
+  .icon-disabled {
+    color: $iconsDisable;
 
   }
 
@@ -43,7 +71,7 @@ $game-color: red;
       ul {
 
         li {
-          border-bottom: 1px solid $game-color;
+          border-bottom: 1px solid $listBorder;
         }
       }
     }
