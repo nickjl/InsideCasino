@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAsCA,UAAW,CACT,aAAa,CAAE,kBAAqB,CAIlC,oBAAG,CACD,KAAK,CAdH,OAAkB,CAgBtB,mBAAE,CACA,KAAK,CAjBH,OAAkB,CAuBtB,kBAAE,CACA,UAAU,CAxBR,OAAkB,CA8B1B,aAAc,CACZ,gBAAgB,CA7BN,OAAkB,CA8B5B,KAAK,CA5BI,OAAmB,CAiCxB,6BAAI,CACF,IAAI,CAlCD,OAAmB,CAwC5B,4BAAe,CACb,KAAK,CAvCM,mBAAmB,CAkD1B,qCAAG,CACD,aAAa,CAAE,8BAAqB",
+"sources": ["../../../source/sass/partials/games/games.scss"],
+"names": [],
+"file": "games.css"
+}

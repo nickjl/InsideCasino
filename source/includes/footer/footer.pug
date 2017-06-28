@@ -1,6 +1,6 @@
-mixin bingoSite (title, classes, img)
+mixin bingoSite (title, classes, img, padding)
     li
-        a.d-flex.flex-row.p-1.align-items-center(href="")
+        a.d-flex.flex-row.p-1.align-items-center(href="", class= padding)
             img.mr-3(src= img, class= classes)
             span.footer-title= title
 
@@ -19,14 +19,17 @@ mixin bingoSite (title, classes, img)
 section.footer-sites
     .d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.g1__footer.container.color
         .c1.p-3
-            h2 Slot Games
+            h2 Casino Games
             hr.title-underline
             ul.d-flex.flex-column.list-unstyled
-                +bingoSite("Starburst", "thumb-change", "")
-                +bingoSite("Rainbow Riches", "thumb-change", "")
-                +bingoSite("Deal or no deal", "thumb-change", "")
-                +bingoSite("Cleopatra slots", "thumb-change", "")
-                +bingoSite("Golden Goddess", "thumb-change", "")
+                +bingoSite("Starburst", "thumb-change", "", "py-2")
+                +bingoSite("Rainbow Riches", "thumb-change", "", "py-2")
+                +bingoSite("Deal or no deal", "thumb-change", "", "py-2")
+                +bingoSite("Cleopatra slots", "thumb-change", "", "py-2")
+                +bingoSite("Golden Goddess", "thumb-change", "", "py-2")
+                +bingoSite("Poker", "thumb-change", "", "py-2")
+                +bingoSite("Blackjack", "thumb-change", "", "py-2")
+                +bingoSite("Roulette", "thumb-change", "", "py-2")
 
         .c1.p-3
             h2 No Deposit Casinos

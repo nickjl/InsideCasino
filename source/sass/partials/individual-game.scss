@@ -94,10 +94,12 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
         padding: 0;
 
         li {
-          width: 100%;
+          width: 94%;
           border-bottom: 1px solid $listBorder;
           font-family: $body-font;
           font-weight: 600;
+          margin-left: 3%;
+          margin-right: 3%;
         }
       }
     }
@@ -145,7 +147,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
         ul {
 
           li {
-            width: 46%;
+            width: 44%;
           }
         }
       }
