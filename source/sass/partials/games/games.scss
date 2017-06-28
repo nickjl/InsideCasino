@@ -9,10 +9,24 @@
   }
 }
 
-// must be: 0< h <360; s >= 80; b<= 50
+$game: dragon;
 $h: 269;
 $s: 80;
 $b: 39;
+
+
+// must be: 0< h <360; s >= 80; b<= 50
+@if $game == starburst {
+  $h: 269;
+  $s: 80;
+  $b: 39;
+}
+
+@if $game == dragon {
+  $h: 350.3;
+  $s: 86.8;
+  $b: 47.5;
+}
 
 $btnBg: hsb($h, $s, $b, 1);
 $borderTop: hsb($h, 80, 60, 1);

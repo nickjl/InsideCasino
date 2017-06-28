@@ -1,8 +1,6 @@
 $casino-color-1: #f8b334;
 $casino-color-2: black;
 
-
-
 .casino-pg {
   background-color: $casino-color-1;
   border-bottom: 15px solid $casino-color-2;
@@ -85,7 +83,6 @@ $casino-color-2: black;
       color: lighten($casino-color-2, 30%);
     }
   }
-
 
 }
 
