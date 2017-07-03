@@ -1,4 +1,13 @@
 $grey: #B7B7B7;
+$footer-color: #5F308C;
+
+
+footer {
+  font-family: $body-font;
+  h2, input, button {
+    font-family: $body-font;
+  }
+}
 
 
 .title-underline {
@@ -7,19 +16,46 @@ $grey: #B7B7B7;
   margin-top: 0;
 }
 
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-2px 10px 0 0;
+  vertical-align:middle;
+  background: transparent;
+  border: 2px solid $footer-color;
+  cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+  background: $footer-color;
+}
+
+
 .subscribe-box {
-  background: $theme-color-1;
-  border-top: 8px solid lighten($theme-color-2,20%);
+  background: lighten($footer-color, 50%);
+  //border-top: 8px solid $footer-color;
   position: relative;
 
   h2 {
-    color: #ffffff;
+    color: $footer-color;
+    margin-top: .5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
   }
 
   &__email {
     margin: 7px auto;
     padding: 5px;
+    width: 280px;
+  }
 
+  input:focus {
+    outline: 1px solid $footer-color;
   }
 
   label {
@@ -33,13 +69,14 @@ $grey: #B7B7B7;
     font-size: 0.8rem;
 
     a {
-      color: #ffffff;
+      color: $footer-color;
+      text-decoration: underline;
     }
   }
 
   .btn-send {
     color: #ffffff;
-    background: lighten($theme-color-2,20%);
+    background: $theme-color-1;
     border-radius: 20px;
     margin-bottom: -42px;
     padding: 8px 30px;
@@ -164,24 +201,24 @@ $grey: #B7B7B7;
 }
 
 .footer-sites {
-  padding-top: 4rem;
-  margin-top: 4rem;
+  padding-top: 6rem;
+  margin-top: -4rem;
   padding-bottom: 4rem;
-  background: $theme-color-2;
+  background: $footer-color;
   color: $grey;
 
   h2 {
     font-size: 1.4rem;
-    color: $theme-color-1;
+    color: #ffffff;
     text-align: left;
     font-family: $body-font;
 
   }
 
-  a, a:hover {
+  a, a:hover, a span:hover {
     text-decoration: none;
     font-size: 1rem;
-    color: $grey;
+    color: $theme-color-1;
   }
 
   img {
@@ -206,11 +243,11 @@ $grey: #B7B7B7;
 
 
 .about-us-foot {
-  color: $theme-color-2;
-  background: lighten($theme-color-2, 75%);
+  color: $footer-color;
+  background: lighten($footer-color, 50%);
 
   a, a:hover {
-    color: lighten($theme-color-2,20%);
+    color: lighten($footer-color,20%);
     text-decoration: none;
     margin: 20px;
     font-size: 1rem;
@@ -220,17 +257,18 @@ $grey: #B7B7B7;
 
 
 .legal-logos {
-  color: $theme-color-2;
+  color: $footer-color;
 
   a {
     margin: 12px;
     font-size: 0.9rem;
     text-decoration: none;
+    color: lighten($footer-color,20%);
   }
 }
 
 .footer-underline {
-  border-top: 6px solid $theme-color-2;
+  border-top: 6px solid $footer-color;
 }
 
 .footer-logo {
@@ -238,19 +276,17 @@ $grey: #B7B7B7;
 }
 
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
+  .footer-container {
+    width: 80%;
+    margin: auto;
+  }
+
   .subscribe-box {
     &__email, label {
       width: 90%;
     }
 
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .footer-container {
-    width: 80%;
-    margin: auto;
   }
 }
 

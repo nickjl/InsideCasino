@@ -60,13 +60,17 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
 .game-summary {
   background-color: $defaultBg;
-  color: $tintText;
+  color: $icons;
 
   &__icons {
     &--box {
 
       svg {
-        fill: $tintText;
+        fill: inherit;
+      }
+
+      p {
+        color: $tintText;
       }
     }
 
@@ -74,6 +78,10 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
   .icon-disabled {
     color: $iconsDisable;
+
+    p {
+      color: $iconsDisable;
+    }
 
   }
 
@@ -86,6 +94,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
         li {
           border-bottom: 1px solid $listBorder;
+          color: $tintText;
         }
       }
     }

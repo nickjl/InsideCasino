@@ -62,7 +62,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
   background-color: $defaultBg;
   background: url('../assets/images/games/starburst_bg.jpg') no-repeat;
   background-size: cover;
-  color: $tintText;
+  color: $icons;
   padding-top: 3rem;
 
   &__icons {
@@ -72,7 +72,12 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
       svg {
         height: 60px;
-        fill: $tintText;
+        fill: inherit;
+      }
+
+
+      p {
+        color: $tintText;
       }
     }
 
@@ -80,6 +85,11 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
   .icon-disabled {
     color: $iconsDisable;
+
+
+    p {
+      color: $iconsDisable;
+    }
   }
 
   &__attributes {
@@ -101,6 +111,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
           font-weight: 600;
           margin-left: 3%;
           margin-right: 3%;
+          color: $tintText;
         }
       }
     }
