@@ -1,0 +1,91 @@
+extends includes/layout
+
+block content
+
+
+    mixin newsSummary
+        .d-flex.flex-column.flex-md-row.g1-md__s1
+            .c1.px-0.my-2
+                img.img-fluid.news-image.img-center(src="/assets/images/news.png")
+            .c2.px-0.px-md-4.my-2
+                p.lead.
+                    "We're treating all our UK members to something rather special"
+                p.
+                    Been a  bit busy lately? Maybe you've forgotten all about our exclusive competition to win an iPad Pro 32 gb at
+
+
+    .wrapper
+
+        .d-flex.g1-md__s1.flex-column.flex-md-row.faq
+            .c2
+                h1 News
+
+                +newsSummary
+                +newsSummary
+                +newsSummary
+                +newsSummary
+                +newsSummary
+
+
+
+
+                nav(aria-label='Page navigation')
+                    ul.pagination.my-3
+                        li.page-item.disabled
+                            a.page-link(href='#', tabindex='-1') &laquo; Prev
+                        li.page-item
+                            a.page-link(href='#') 1
+                        li.page-item.active
+                            a.page-link(href='#') 2
+                        li.page-item
+                            a.page-link(href='#') 3
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') 4
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') 5
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') 6
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') 7
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') ...
+                        li.page-item.hidden-xs-down
+                            a.page-link(href='#') 20
+                        li.page-item
+                            a.page-link(href='#') Next &raquo;
+
+
+
+
+            .c1.flex-first.flex-md-unordered
+                h2 News categories
+                .related-category
+                    a(href="")
+                        h5 Match Deposit Bonus
+                .related-category
+                    a(href="")
+                        h5 High roller casino
+                .related-category
+                    a(href="")
+                        h5 Free Spins
+                .related-category
+                    a(href="")
+                        h5 No deposit bonus
+                .related-category
+                    a(href="")
+                        h5 Free games
+                .related-category
+                    a(href="")
+                        h5 Match Deposit Bonus
+                .related-category
+                    a(href="")
+                        h5 High roller casino
+                .related-category
+                    a(href="")
+                        h5 Free Spins
+                .related-category
+                    a(href="")
+                        h5 No deposit bonus
+                .related-category
+                    a(href="")
+                        h5 Free games
