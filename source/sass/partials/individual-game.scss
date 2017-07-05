@@ -75,7 +75,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 
       svg {
         height: 60px;
-        fill: inherit;
+        fill: $icons;
       }
 
 
@@ -89,6 +89,9 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
   .icon-disabled {
     color: $iconsDisable;
 
+    svg {
+      fill: $iconsDisable;
+    }
 
     p {
       color: $iconsDisable;

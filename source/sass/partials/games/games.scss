@@ -83,6 +83,10 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
       color: $iconsDisable;
     }
 
+    svg {
+      fill: $iconsDisable;
+    }
+
   }
 
 
