@@ -18,6 +18,11 @@ module.exports = function (grunt) {
                 tasks: ['pug']
             },
 
+            js: {
+                files: ['source/assets/js/*.js'],
+                tasks: ['concat', 'uglify']
+            },
+
             // browserSync: {
             //     files: ['app/**/*.css', 'app/**/*.html'],
             //     tasks: ['pug']
@@ -37,7 +42,6 @@ module.exports = function (grunt) {
                     //'app/css/ampgame.css':			'source/sass/gameampstyles.scss',
                     'app/css/casinos/casino.css':	'source/sass/partials/casinos/casino.scss',
                     'app/css/games/games.css':	'source/sass/partials/games/games.scss',
-                    //'app/casino02/css/app.css':	'source/casino02/sass/styles.sass'
 
                 },
                 options: {
@@ -64,7 +68,7 @@ module.exports = function (grunt) {
                 },
                 files: [ {
                     cwd: 'source',
-                    src: '**/*.pug',
+                    src: '/*.pug',
                     dest: 'app/',
                     expand: true,
                     ext: '.html'
@@ -85,13 +89,13 @@ module.exports = function (grunt) {
                 src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js','source/assets/js/stackblur.js', 'source/assets/js/bxSlider.js'],
                 // the location of the resulting JS file
                 dest: 'app/assets/js/insidecasino.js'
-            }
+            },
 
             // css: {
             //     // the files to concatenate
-            //     src: ['source/assets/css/*.css'],
+            //     src: ['app/assets/css/jquery.bxslider.min.css', 'app/css/app.css'],
             //     // the location of the resulting JS file
-            //     dest: 'dist/wdwbingo.css'
+            //     dest: 'app/assets/app.min.css'
             // }
         },
 

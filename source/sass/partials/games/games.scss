@@ -9,7 +9,7 @@
   }
 }
 
-$game: dragon;
+$game: starburst;
 $h: 269;
 $s: 80;
 $b: 39;
@@ -59,7 +59,7 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 }
 
 .game-summary {
-  //background-color: $defaultBg;
+  background-color: $defaultBg;
   color: $icons;
 
   &__icons {

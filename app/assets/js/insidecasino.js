@@ -4221,7 +4221,7 @@ $('.viewMoreBonuses').click(function() {
 /* Blurs background image for individual game pages */
 
 $(function() {
-    var BLUR_RADIUS = 100;
+    var BLUR_RADIUS = 3;
     var canvas = document.querySelector('[data-canvas]');
     var canvasContext = canvas.getContext('2d');
     var image = new Image();
