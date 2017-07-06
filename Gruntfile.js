@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['source/**/*.sass', 'source/**/*.scss'],
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass', 'concat', 'autoprefixer']
             },
 
             css: {
@@ -35,13 +35,13 @@ module.exports = function (grunt) {
             dev: {
                 files: {
                     // destination				// source file
-                    'app/css/app.css':			'source/sass/styles.scss',
+                    'app/assets/css/app.min.css':			'source/sass/styles.scss',
                     // other casnos
                     //'app/css/amphome.css':			'source/sass/ampstyles.scss',
                     //'app/css/ampcasino.css':			'source/sass/casinoampstyles.scss',
                     //'app/css/ampgame.css':			'source/sass/gameampstyles.scss',
-                    'app/css/casinos/casino.css':	'source/sass/partials/casinos/casino.scss',
-                    'app/css/games/games.css':	'source/sass/partials/games/games.scss',
+                    'app/assets/css/casinos/casino.min.css':	'source/sass/partials/casinos/casino.scss',
+                    'app/assets/css/games/games.min.css':	'source/sass/partials/games/games.scss',
 
                 },
                 options: {
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
         autoprefixer: {
             dev: {
                 files: {
-                    'app/css/app.css': 'app/css/app.css'
+                    'app/assets/css/app.min.css': 'app/assets/css/app.min.css'
                 }
             }
         },
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                 },
                 files: [ {
                     cwd: 'source',
-                    src: '/*.pug',
+                    src: '*.pug',
                     dest: 'app/',
                     expand: true,
                     ext: '.html'
@@ -80,23 +80,23 @@ module.exports = function (grunt) {
 
             // Need to look at, put js concat within task.
 
-            options: {
-                // define a string to put between each file in the concatenated output
-                separator: ';'
-            },
-            dist: {
+            js: {
                 // the files to concatenate
-                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js','source/assets/js/stackblur.js', 'source/assets/js/bxSlider.js'],
+                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js','source/assets/js/stackblur.js', 'source/assets/js/custom.js'],
                 // the location of the resulting JS file
-                dest: 'app/assets/js/insidecasino.js'
+                dest: 'app/assets/js/insidecasino.js',
+                options: {
+                    // define a string to put between each file in the concatenated output
+                    separator: ';'
+                }
+
             },
 
-            // css: {
-            //     // the files to concatenate
-            //     src: ['app/assets/css/jquery.bxslider.min.css', 'app/css/app.css'],
-            //     // the location of the resulting JS file
-            //     dest: 'app/assets/app.min.css'
-            // }
+            css: {
+                src: ['source/assets/css/jquery.bxslider.min.css', 'app/assets/css/app.min.css'],
+                dest: 'app/assets/css/insidecasino.min.css'
+            }
+
         },
 
         uglify: {
@@ -109,6 +109,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+
 
 
         copy: {

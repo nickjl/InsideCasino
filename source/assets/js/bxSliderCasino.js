@@ -1,3 +1,5 @@
+/* Creates gallery slider on casino homepage */
+
 $(document).ready(function(){
     $('.gallery-slider').bxSlider({
         slideWidth: 400,
@@ -9,4 +11,3 @@ $(document).ready(function(){
         }
     });
 });
-

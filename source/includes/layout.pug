@@ -1,5 +1,3 @@
-- bodyId = "";
-
 doctype
 html
     head
@@ -9,19 +7,19 @@ html
             meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
         block css
-            link(rel='stylesheet', href='assets/css/jquery.bxslider.min.css')
-            link(rel='stylesheet', href='css/app.css')
-
+            //-link(rel='stylesheet', href='assets/css/jquery.bxslider.min.css')
+            link(rel='stylesheet', href='assets/css/insidecasino.min.css')
+            link(href='http://fonts.googleapis.com/css?family=Poller+One|Montserrat:400,700', rel='stylesheet', type='text/css')
 
 
 
         block links
-            //- link(rel='profile', href='')
+            //-link(rel='profile', href='')
             //-link(rel='shortcut icon', href='http://www.monacoriches.com/favicon.png', type='image/x-icon')
             //-link(rel='canonical', href='http://www.monacoriches.com/')
 
     block vars
-    body(id= bodyId)
+    body
         include casino-card/casino-card
         include svg/svg
 

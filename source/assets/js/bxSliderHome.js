@@ -1,3 +1,5 @@
+/* Monitors window resize and creates/destroys the homepage slider */
+
 $(document).ready(function() {
     var width = window.innerWidth;
     $(window).resize(function(){
@@ -22,7 +24,7 @@ function slider(width)
             });
         }
 
-    }else
+    } else
     {
         if(window.sldr!=undefined)
         {
@@ -32,6 +34,7 @@ function slider(width)
     }
 }
 
+/* Deferred images to load after page has finished loading */
 
 function init() {
     var imgDefer = document.getElementsByTagName('img');
