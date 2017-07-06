@@ -60,7 +60,7 @@ a span:hover {
   text-decoration: underline;
 }
 
-a:hover {
+a, a:hover {
   text-decoration: none;
   color: $theme-color-1;
 }
