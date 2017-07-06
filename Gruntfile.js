@@ -72,13 +72,36 @@ module.exports = function (grunt) {
             }
         },
 
+        concat: {
+
+            // Need to look at, put js concat within task.
+
+            options: {
+                // define a string to put between each file in the concatenated output
+                separator: ';'
+            },
+            dist: {
+                // the files to concatenate
+                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js','source/assets/js/stackblur.js', 'source/assets/js/bxSlider.js'],
+                // the location of the resulting JS file
+                dest: 'app/assets/js/insidecasino.js'
+            }
+
+            // css: {
+            //     // the files to concatenate
+            //     src: ['source/assets/css/*.css'],
+            //     // the location of the resulting JS file
+            //     dest: 'dist/wdwbingo.css'
+            // }
+        },
+
         uglify: {
             options: {
                 mangle: true
             },
             my_target: {
                 files: {
-                    'app/assets/js/bxSlider.min.js': ['source/assets/js/bxSlider.js']
+                    'app/assets/js/insidecasino.min.js': ['app/assets/js/insidecasino.js']
                 }
             }
         },
@@ -130,6 +153,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-pug');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-browser-sync');
 
