@@ -84,122 +84,14 @@ input[type="checkbox"]:checked + label span {
   }
 }
 
-.color {
-  .thumb-grosvenor-casino {
-    background: #03262c;
-  }
-  .thumb-888-casino {
-    background: #1a1a1a;
-  }
-  .thumb-gala-casino {
-    background: #1a1a1a;
-  }
-  .thumb-ladbrokes-casino {
-    background: #e41c1c;
-  }
-  .thumb-monopoly-casino {
-    background: #102252;
-  }
-  .thumb-sky-casino {
-    background: #0d0d0d;
-  }
-  .thumb-pink-casino {
-    background: #e5e5e5;
-  }
-  .thumb-bgo-casino {
-    background: #0f0f0f;
-  }
-  .thumb-foxy-casino {
-    background: #e5e5e5;
-  }
-  .thumb-coral-casino {
-    background: #004696;
-  }
-  .thumb-william-hill-casino {
-    background: #236d9b;
-  }
-  .thumb-paddy-power-power-casino {
-    background: #005440;
-  }
-  .thumb-777-casino {
-    background: #f7a943;
-  }
-  .thumb-betfair-casino {
-    background: #f8b334;
-  }
-  .thumb-virgin-casino {
-    background: #cb0000;
-  }
-  .thumb-betfred {
-    background: #001b38;
-  }
-  .thumb-leo-vegas-casino {
-    background: #ea7446;
-  }
-  .thumb-bet365-casino {
-    background: #057b5b;
-  }
-  .thumb-32-red-casino {
-    background: #fe1419;
-  }
-  .thumb-21-casino {
-    background: #232324;
-  }
-  .thumb-maria-casino {
-    background: #363647;
-  }
-  .thumb-hello-casino {
-    background: #393939;
-  }
-  .thumb-wink-slots {
-    background: #1e1e45;
-  }
-  .thumb-casumo {
-    background: #37bfb9;
-  }
-  .thumb-mr-smith-casino {
-    background: #a5a59d;
-  }
-  .thumb-stan-james-casino {
-    background: #78b41e;
-  }
-  .thumb-casinoeuro {
-    background: #1f294a;
-  }
-  .thumb-spinit-casino {
-    background: #ba271f;
-  }
-  .thumb-mfortune-casino {
-    background: #313131;
-  }
-  .thumb-energy-casino {
-    background: #222222;
-  }
-  .thumb-spin-genie-casino {
-    background: #f2f2f2;
-  }
-  .thumb-betway-casino {
-    background: #231f20;
-  }
-  .thumb-viking-slots {
-    background: #2d3548;
-  }
-  .thumb-comeon-casino {
-    background: #151917;
-  }
-  .thumb-slots-magic {
-    background: #1c021b;
-  }
-  .thumb-casino-land {
-    background: #041a25;
-  }
-  .thumb-mansion-casino {
-    background: #0d0d0d;
-  }
-  .thumb-party-casino {
-    background: #211551;
+$games-list: grosvenor-casino #03262c, 888-casino #1a1a1a, gala-casino #1a1a1a, ladbrokes-casino #e41c1c, monopoly-casino #102252, sky-casino #0d0d0d, pink-casino #e5e5e5, bgo-casino #0f0f0f, foxy-casino #e5e5e5, coral-casino #004696, william-hill-casino #236d9b, paddy-power-power-casino #005440, 777-casino #f7a943, betfair-casino #f8b334, virgin-casino #cb0000, betfred #001b38, leo-vegas-casino #ea7446, bet365-casino #057b5b, 32-red-casino #fe1419, 21-casino #232324, maria-casino #363647, hello-casino #393939, wink-slots #1e1e45, casumo #37bfb9, mr-smith-casino #a5a59d, stan-james-casino #78b41e, casinoeuro #1f294a, spinit-casino #ba271f, mfortune-casino #313131, energy-casino #222222, spin-genie-casino #f2f2f2, betway-casino #231f20, viking-slots #2d3548, comeon-casino #151917, slots-magic #1c021b, casino-land #041a25, mansion-casino #0d0d0d, party-casino #211551;
+
+@each $game in $games-list {
+  .thumb-#{nth($game,1)} {
+    background: #{nth($game, 2)};
   }
 }
+
 
 .footer-sites {
   padding-top: 6rem;

@@ -1,9 +1,9 @@
-$casino-color-1: #f8b334;
-$casino-color-2: black;
+$bg-color: #f8b334;
+$top-color: black;
 
 .casino-pg {
-  background-color: $casino-color-1;
-  border-bottom: 15px solid $casino-color-2;
+  background-color: $bg-color;
+  border-bottom: 15px solid $top-color;
   &--dot {
     background-color: green;
   }
@@ -11,28 +11,28 @@ $casino-color-2: black;
   &__offer {
 
     &--box {
-      border: 3px solid lighten($casino-color-2, 20%);
+      border: 3px solid lighten($top-color, 20%);
 
       b {
-        color: $casino-color-2;
+        color: $top-color;
       }
     }
 
     &--playNow {
-      background: $casino-color-2;
-      color: $casino-color-1;
+      background: $top-color;
+      color: $bg-color;
     }
 
     &--playNow:hover {
-      color: $casino-color-1;
+      color: $bg-color;
     }
   }
 
   &__icons {
-    color: $casino-color-2;
+    color: $top-color;
 
     p {
-      color: $casino-color-2;
+      color: $top-color;
     }
 
     svg {
@@ -41,16 +41,16 @@ $casino-color-2: black;
   }
 
   h2 {
-    color: lighten($casino-color-2, 40%);
+    color: lighten($top-color, 40%);
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a {
-    background: $casino-color-1;
-    border: 3px solid $casino-color-2;
+    background: $bg-color;
+    border: 3px solid $top-color;
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: $casino-color-2;
+    background: $top-color;
   }
 
 }
@@ -61,14 +61,14 @@ $casino-color-2: black;
 
 
 .casino-bonus {
-  background: lighten($casino-color-1, 40%);
+  background: lighten($bg-color, 40%);
 
   &__top {
-    background-color: $casino-color-1;
+    background-color: $bg-color;
     position: relative;
 
     &--code {
-      color: lighten($casino-color-2, 25%);
+      color: lighten($top-color, 25%);
 
     }
   }
@@ -76,11 +76,11 @@ $casino-color-2: black;
   &__bottom {
 
     h2 {
-      color: $casino-color-2
+      color: $top-color
     }
 
     p {
-      color: lighten($casino-color-2, 30%);
+      color: lighten($top-color, 30%);
     }
   }
 

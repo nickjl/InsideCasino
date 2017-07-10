@@ -1,10 +1,10 @@
-mixin bonusCard(classes)
-    .casino-bonus(class= classes)
+mixin bonusCard(classes, heading, info)
+    .casino-bonus(class= classes).d-flex.justify-content-between.flex-column
         .casino-bonus__top
             img.img-fluid(src="assets/images/card-images/betFair.png")
             .casino-bonus__top--code.p-2
                 span code: GUTSB1
-        .casino-bonus__bottom.p-3
-            h2 Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus
-            p Welcome Bonus
+        .casino-bonus__bottom.p-3.d-flex.flex-column
+            h2= heading + 'Shadow Bet Casino: 100% up to £300, 1st Deposit Bonus'
+            p=info + 'Welcome Bonus'
             a(href="") GET NOW

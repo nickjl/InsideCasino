@@ -30,8 +30,10 @@
 
   &__bottom {
     background: rgba(0, 0, 0, 0.1);
+    height: 100%;
     a {
       font-family: $header-font;
+      margin-top: auto;
     }
 
     h2 {
