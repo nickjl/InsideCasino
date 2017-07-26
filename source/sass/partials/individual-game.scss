@@ -140,6 +140,18 @@ $iconsDisable: hsb($h, 5, 40, 0.5);
 .game-details {
   margin-top: 4rem;
 
+  ul {
+    list-style-type: disc;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  li {
+    font-family: $body-font;
+    font-size: 0.9rem;
+  }
+
   h2 {
     text-align: left;
     margin-top: 0;

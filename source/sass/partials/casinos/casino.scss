@@ -1,90 +1,195 @@
 $bg-color: #f8b334;
 $top-color: black;
 
-.casino-pg {
-  background-color: $bg-color;
-  border-bottom: 15px solid $top-color;
-  &--dot {
-    background-color: green;
-  }
+//everest-casino-review $bg-color $top-color,
+//cashmio-casino $bg-color $top-color,
 
-  &__offer {
+$casino-list:
+power-spins-review #131442 white,
+genting-casino #111111 white,
+wink-slots-review #1e1e45 #31d7c3,
+hello-casino-review #393939 #00b1d0,
+leo-vegas-casino-review #ea7446 white,
+betfred-casino-review #001b38 white,
+virgin-games-casino-review #cb0000 white,
+betfair-casino-review #f8b334 #000000,
+maria-casino-review #363647 white,
+777-casino-review #f7a943 #4c1320,
+paddy-power-casino-review #005440 white,
+ladbrokes-casino-review #e41c1c white,
+21-casino-review #232324 #bdbdbd,
+monopoly-casino-review #102252 white,
+foxy-casino-review #e5e5e5 #efb110,
+bet365-casino-review #057b5b white,
+coral-casino-review #004696 white,
+grand-ivy-casino #0d0d0d #9a7d42,
+william-hill-casino-review #236d9b white,
+spin-station-casino-review #f2f2f2 #40afbc,
+party-casino-review #211551 white,
+mansion-casino-review #0d0d0d white,
+casino-land-review #041a25 #dc4141,
+slots-magic-casino-review #1c021b white,
+come-on-casino-review #151917 #96bf0d,
+viking-slots-casino #2d3548 white,
+spin-genie-casino-review #f2f2f2 #1988fe,
+energy-casino-review #222222 white,
+mfortune-casino-review #313131 white,
+spinit-casino-review #ba271f white,
+casino-euro-review #1f294a white,
+stan-james-casino #78b41e white,
+mr-smith-casino-review #a5a59d white,
+bgo-casino-review #0f0f0f white,
+pink-casino-review #e5e5e5 #e90188,
+gala-casino-review #1a1a1a white,
+888-casino-review #1a1a1a #7bf500,
+sky-casino-review #0d0d0d white,
+grosvenor-casino-review #03262c white,
+32red-casino-review #fe1419 white,
+betway-casino-review #231f20 white,
+casumo-casino #37bfb9 white;
 
-    &--box {
-      border: 3px solid lighten($top-color, 20%);
 
-      b {
-        color: $top-color;
+@each $casino in $casino-list {
+  .casino-#{nth($casino,1)} {
+    .casino-pg {
+      background-color: #{nth($casino, 2)};
+      border-bottom: 15px solid nth($casino, 3);
+
+      &__offer {
+
+        &--box {
+          border: 3px solid rgba(nth($casino, 3), .5);
+
+          b {
+            color: nth($casino, 3);
+          }
+        }
+
+        &--playNow {
+          background: nth($casino, 3);
+          color: #{nth($casino, 2)};
+        }
+
+        &--playNow:hover {
+          color: #{nth($casino, 2)};
+        }
       }
-    }
 
-    &--playNow {
-      background: $top-color;
-      color: $bg-color;
-    }
+      &__icons {
+        color: nth($casino, 3);
 
-    &--playNow:hover {
-      color: $bg-color;
+        p {
+          color: nth($casino, 3);
+        }
+
+        svg {
+          fill: currentColor;
+        }
+      }
+
+      h2 {
+        color: lighten(nth($casino, 3), 40%);
+      }
+
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        background: #{nth($casino, 2)};
+        border: 3px solid nth($casino, 3);
+      }
+
+      .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+        background: nth($casino, 3);
+      }
+
     }
   }
-
-  &__icons {
-    color: $top-color;
-
-    p {
-      color: $top-color;
-    }
-
-    svg {
-      fill: currentColor;
-    }
-  }
-
-  h2 {
-    color: lighten($top-color, 40%);
-  }
-
-  .bx-wrapper .bx-pager.bx-default-pager a {
-    background: $bg-color;
-    border: 3px solid $top-color;
-  }
-
-  .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: $top-color;
-  }
-
 }
 
 
 
+//.casino-pg {
+//  background-color: $bg-color;
+//  border-bottom: 15px solid $top-color;
+//  &--dot {
+//    background-color: green;
+//  }
+//
+//  &__offer {
+//
+//    &--box {
+//      border: 3px solid lighten($top-color, 20%);
+//
+//      b {
+//        color: $top-color;
+//      }
+//    }
+//
+//    &--playNow {
+//      background: $top-color;
+//      color: $bg-color;
+//    }
+//
+//    &--playNow:hover {
+//      color: $bg-color;
+//    }
+//  }
+//
+//  &__icons {
+//    color: $top-color;
+//
+//    p {
+//      color: $top-color;
+//    }
+//
+//    svg {
+//      fill: currentColor;
+//    }
+//  }
+//
+//  h2 {
+//    color: lighten($top-color, 40%);
+//  }
+//
+//  .bx-wrapper .bx-pager.bx-default-pager a {
+//    background: $bg-color;
+//    border: 3px solid $top-color;
+//  }
+//
+//  .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+//    background: $top-color;
+//  }
+//
+//}
 
 
 
-.casino-bonus {
-  background: lighten($bg-color, 40%);
 
-  &__top {
-    background-color: $bg-color;
-    position: relative;
 
-    &--code {
-      color: lighten($top-color, 25%);
 
-    }
-  }
-
-  &__bottom {
-
-    h2 {
-      color: $top-color
-    }
-
-    p {
-      color: lighten($top-color, 30%);
-    }
-  }
-
-}
+//.casino-bonus {
+//  //background: lighten($bg-color, 40%);
+//
+//  &__top {
+//    background-color: $bg-color;
+//    position: relative;
+//
+//    &--code {
+//      color: lighten($top-color, 25%);
+//
+//    }
+//  }
+//
+//  &__bottom {
+//
+//    h2 {
+//      color: $top-color
+//    }
+//
+//    p {
+//      color: lighten($top-color, 30%);
+//    }
+//  }
+//
+//}
 
 
 

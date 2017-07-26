@@ -51,65 +51,13 @@
 @import "scss/utilities";
 
 
-$bg_colour:             #f4f4f4;
-$box_colour:            #fff;
-$border_style:          1px solid;
-$border_radius:         4px;
-$header-font: 'Poller One';
-$body-font: Sans-Serif;
-$header-font-special: 'Montserrat';
 
-html {
-  background:         $bg_colour;
-}
-
-body {
-  background-color: white;
-}
-
-body, input, button, a, h2, h1 {
-  font-family: $header-font, $body-font;
-  //color: #9EA1A2;
-}
-
-.wrapper {
-  max-width: 1500px;
-  margin: auto;
-  clear: both;
-}
-
-
-
-h1 {
-  font-size: 1.3rem;
-  margin-top: 1.5rem;
-  color: white;
-}
-
-h2 {
-  font-size: 1.3rem;
-  margin-top: 1.5rem;
-  color: #662B91;
-  text-align: center;
-}
-
-a h2 {
-  height: auto;
-}
-
-p {
-  font-size: 0.8rem;
-}
-
-
-h4, p, a {
-  font-family: $body-font;
-}
 
 
 
 
 @import "partials/variables";
+@import "partials/general";
 @import "partials/header";
 @import "partials/card";
 @import "partials/homepage";
@@ -122,6 +70,7 @@ h4, p, a {
 @import "partials/newspost";
 @import "partials/faq";
 @import "partials/newshome";
+@import "partials/atif";
 
 
 

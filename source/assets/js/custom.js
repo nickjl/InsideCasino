@@ -1,8 +1,8 @@
 /* Monitors window resize and creates/destroys the homepage slider */
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
     var width = window.innerWidth;
-    $(window).resize(function(){
+    jQuery(window).resize(function(){
         var width = window.innerWidth;
         slider(width);
     });
@@ -15,7 +15,7 @@ function slider(width)
     {
         if(window.sldr==undefined)
         {
-            window.sldr=$('.header-slider').bxSlider({
+            window.sldr=jQuery('.header-slider').bxSlider({
                 minSlides: 1,
                 maxSlides: 1,
                 pager: false,
@@ -47,29 +47,29 @@ window.onload = init;
 
 /* Creates gallery slider on casino homepage */
 
-$(document).ready(function(){
-    $('.gallery-slider').bxSlider({
+jQuery(document).ready(function(){
+    jQuery('.gallery-slider').bxSlider({
         slideWidth: 400,
         auto: true,
         controls: false,
         pager: true,
         onSliderLoad: function(){
-            $(".gallery-slider").css("visibility", "visible");
+            jQuery(".gallery-slider").css("visibility", "visible");
         }
     });
 });
 
 /* Show/hide bonus card on mobile */
 
-$('.viewMoreBonuses').click(function() {
-    $('.hide-bonuses').slideToggle('slow');
-    $(this).text( $(this).text() == 'show less' ? "show more" : "show less");
+jQuery('.viewMoreBonuses').click(function() {
+    jQuery('.hide-bonuses').slideToggle('slow');
+    jQuery(this).text( jQuery(this).text() == 'show less' ? "show more" : "show less");
 
 });
 
 /* Blurs background image for individual game pages */
 
-$(function() {
+jQuery(function() {
     var BLUR_RADIUS = 100;
     var canvas = document.querySelector('[data-canvas]');
     if(canvas) {

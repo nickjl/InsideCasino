@@ -1,0 +1,52 @@
+html {
+  background:         $bg_colour;
+}
+
+body {
+  background-color: white;
+}
+
+body, input, button, h2, h1 {
+  font-family: $header-font;
+  //color: #9EA1A2;
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin: auto;
+  clear: both;
+}
+
+
+
+h1 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #662B91;
+  text-align: center;
+}
+
+h3 {
+  font-family: $header-font-special;
+  font-size: 1.2rem;
+  color: $grey;
+}
+
+a h2 {
+  height: auto;
+}
+
+p,td {
+  font-size: 0.9rem;
+}
+
+
+h4, p, a, td {
+  font-family: $body-font;
+}
