@@ -6,11 +6,6 @@ body {
   background-color: white;
 }
 
-body, input, button, h2, h1 {
-  font-family: $header-font;
-  //color: #9EA1A2;
-}
-
 .wrapper {
   max-width: 1500px;
   margin: auto;
@@ -18,18 +13,20 @@ body, input, button, h2, h1 {
 }
 
 
-
-h1 {
-  font-size: 1.3rem;
-  margin-top: 1.5rem;
-  color: white;
+button {
+  font-family: $header-font;
 }
+//h1 {
+//  font-size: 1.3rem;
+//  margin-top: 1.5rem;
+//  color: white;
+//}
 
 h2 {
   font-size: 1.3rem;
   margin-top: 1.5rem;
-  color: #662B91;
-  text-align: center;
+  color: $grey;
+  font-family: $header-font-special;
 }
 
 h3 {

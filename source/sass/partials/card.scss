@@ -42,7 +42,7 @@ $rate-color3: #FF2626;
       background: $cardColor;
     }
 
-    &__casino-title {
+    &__casino-title a {
       color: $cardColor;
     }
 
@@ -84,14 +84,17 @@ $rate-color3: #FF2626;
 
 .casino-c__red--group, a.casino-c__red:hover {
   color: $cardColorRed;
+  font-family: $header-font;
 }
 
 .casino-c__blue--group, a.casino-c__blue:hover {
   color: $cardColorBlue;
+  font-family: $header-font;
 }
 
 .casino-c__orange--group, a.casino-c__orange:hover {
   color: $cardColorOrange;
+  font-family: $header-font;
 }
 
 

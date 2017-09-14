@@ -70,8 +70,8 @@ jQuery('.viewMoreBonuses').click(function() {
 /* Blurs background image for individual game pages */
 
 jQuery(function() {
-    var BLUR_RADIUS = 100;
-    var canvas = document.querySelector('[data-canvas]');
+    var BLUR_RADIUS = 1;
+    var canvas = document.getElementById('heroCanvas');
     if(canvas) {
         var canvasContext = canvas.getContext('2d');
         var image = new Image();

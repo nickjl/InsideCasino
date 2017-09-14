@@ -1,6 +1,6 @@
 mixin bingoSite (title, classes, img, padding, link)
     li
-        a.d-flex.flex-row.p-1.align-items-center(href= "https://preview.insidecasino.com" + link, class= padding)
+        a.d-flex.flex-row.p-1.align-items-center(href= "https://www.insidecasino.com" + link, class= padding)
             img.mr-3(src= img, class= classes)
             span.footer-title= title
 
@@ -27,43 +27,43 @@ footer
                 h2 Casino Games
                 ul.d-flex.flex-column.list-unstyled
                     +bingoSite("Starburst", "thumb-change", "", "py-2", "/slot/starburst")
-                    +bingoSite("Rainbow Riches", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Deal or no deal", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Cleopatra slots", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Golden Goddess", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Poker", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Blackjack", "thumb-change", "", "py-2", "/slot/")
-                    +bingoSite("Roulette", "thumb-change", "", "py-2", "/slot/")
+                    +bingoSite("Rainbow Riches", "thumb-change", "", "py-2", "/slot/rainbow-riches")
+                    +bingoSite("Deal or no deal", "thumb-change", "", "py-2", "/slot/deal-no-deal")
+                    +bingoSite("Cleopatra slots", "thumb-change", "", "py-2", "/slot/cleopatra-slot")
+                    +bingoSite("Golden Goddess", "thumb-change", "", "py-2", "/slot/golden-godess")
+                    +bingoSite("Poker", "thumb-change", "", "py-2", "/slot/poker")
+                    +bingoSite("Blackjack", "thumb-change", "", "py-2", "/slot/blackjack")
+                    +bingoSite("Roulette", "thumb-change", "", "py-2", "/slot/roulette")
 
             .c1.p-3
                 h2 No Deposit Casinos
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Wink Slots", "thumb-wink-slots", winkSlots, "", "/casino/")
+                    +bingoSite("Wink Slots", "thumb-wink-slots", winkSlots, "", "/casino/wink-slots-review")
                     +bingoSite("Casumo", "thumb-casumo", casumo, "", "/casino/casumo-casino")
-                    +bingoSite("Mr Smith Casino", "thumb-mr-smith-casino", mrSmith, "", "/casino/")
-                    +bingoSite("Stan James Casino", "thumb-stan-james-casino", stanJames, "", "/casino/")
-                    +bingoSite("CasinoEuro", "thumb-casinoeuro", casinoEuro, "", "/casino/")
+                    +bingoSite("Mr Smith Casino", "thumb-mr-smith-casino", mrSmith, "", "/casino/mr-smith-casino-review")
+                    +bingoSite("Stan James Casino", "thumb-stan-james-casino", stanJames, "", "/casino/stan-james-casino")
+                    +bingoSite("CasinoEuro", "thumb-casinoeuro", casinoEuro, "", "/casino/casino-euro-review")
 
             .c1.p-3
                 h2 New Casinos
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Betfred", "thumb-betfred", betfred, "", "/casino/")
-                    +bingoSite("Leo Vegas Casino", "thumb-leo-vegas-casino", leoVegas, "", "/casino/")
-                    +bingoSite("Bet365 Casino", "thumb-bet365-casino", bet365, "", "/casino/")
+                    +bingoSite("Betfred", "thumb-betfred", betfred, "", "/casino/betfred-casino-review")
+                    +bingoSite("Leo Vegas Casino", "thumb-leo-vegas-casino", leoVegas, "", "/casino/leo-vegas-casino-review")
+                    +bingoSite("Bet365 Casino", "thumb-bet365-casino", bet365, "", "/casino/bet365-casino-review")
                     +bingoSite("32 Red Casino", "thumb-32-red-casino", red32, "", "/casino/32red-casino")
-                    +bingoSite("21 Casino", "thumb-21-casino", casino21, "", "/casino/")
+                    +bingoSite("21 Casino", "thumb-21-casino", casino21, "", "/casino/21-casino-review")
 
             .c1.p-3
                 h2 Editors Choice
                 ul.d-flex.flex-column.list-unstyled
                     +bingoSite("Grosvenor Casinos", "thumb-grosvenor-casino", grosvenor, "", "/casino/grosvenor-casinos")
-                    +bingoSite("888 Casino", "thumb-888-casino", eight88, "", "/casino/")
-                    +bingoSite("Gala Casino", "thumb-gala-casino", gala, "", "/casino/")
-                    +bingoSite("Ladbrokes Casino", "thumb-ladbrokes-casino", ladbrokes, "", "/casino/")
-                    +bingoSite("Monopoly Casino", "thumb-monopoly-casino", monopoly, "", "/casino/")
+                    +bingoSite("888 Casino", "thumb-888-casino", eight88, "", "/casino/888-casino-review")
+                    +bingoSite("Gala Casino", "thumb-gala-casino", gala, "", "/casino/gala-casino-review")
+                    +bingoSite("Ladbrokes Casino", "thumb-ladbrokes-casino", ladbrokes, "", "/casino/ladbrokes-casino-review")
+                    +bingoSite("Monopoly Casino", "thumb-monopoly-casino", monopoly, "", "/casino/monopoly-casino-review")
 
 
-    .about-us-foot.py-4
+    //-.about-us-foot.py-4
         .d-flex.flex-column.flex-lg-row.g1__s1.container
             .c1.d-flex.flex-column
                 .d-flex.flex-row.my-4.my-lg-0
@@ -90,7 +90,7 @@ footer
         .container
             hr.footer-underline
         .container
-            .d-flex.flex-row.flex-wrap.justify-content-center
+            //-.d-flex.flex-row.flex-wrap.justify-content-center
                 a(href="") Sitemap
                 a(href="") Terms & Conditions
                 a(href="") Privacy policy
